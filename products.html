@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منتجات DXN - منتجات طبيعية للصحة والعافية</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/dxn-logo.png" alt="DXN Logo" />
+          </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">من نحن</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#products" class="nav-link">المنتجات</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#branches" class="nav-link">الفروع</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#videos" class="nav-link">الفيديوهات</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+          </li>
+        </ul>
+
+        <div>
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a
+            href="https://dxn2u.com/register/123456789"
+            class="btn btn-accent register-btn"
+            >انضم إلينا</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Header -->
+    <section class="products-header">
+      <div class="container">
+        <h1>منتجات DXN</h1>
+        <p>اكتشف مجموعة واسعة من المنتجات الطبيعية للصحة والعافية</p>
+      </div>
+    </section>
+
+    <!-- Customer Dashboard -->
+    <section class="section">
+      <div class="container">
+        <div class="dashboard-container">
+          <div class="dashboard-header">
+            <h2 class="dashboard-title">لوحة تحكم العميل</h2>
+          </div>
+
+          <div class="dashboard-tabs">
+            <div class="dashboard-tab active" data-tab="recent">
+              المنتجات التي زرتها مؤخراً
+            </div>
+            <div class="dashboard-tab" data-tab="suggested">
+              المنتجات المقترحة
+            </div>
+            <div class="dashboard-tab" data-tab="favorites">المفضلة</div>
+          </div>
+
+          <div class="dashboard-content">
+            <div class="recent-products">
+              <div class="recent-product">
+                <img
+                  src="images/products/reishi-coffee.jpg"
+                  alt="قهوة الريشي"
+                />
+                <div class="recent-product-info">
+                  <h4>قهوة الريشي</h4>
+                  <p>زيارة منذ 2 دقيقة</p>
+                </div>
+              </div>
+
+              <div class="recent-product">
+                <img src="images/products/spirulina.jpg" alt="سبيرولينا" />
+                <div class="recent-product-info">
+                  <h4>سبيرولينا</h4>
+                  <p>زيارة منذ 5 دقائق</p>
+                </div>
+              </div>
+
+              <div class="recent-product">
+                <img src="images/products/cordyceps.jpg" alt="كورديسبس" />
+                <div class="recent-product-info">
+                  <h4>كورديسبس</h4>
+                  <p>زيارة منذ 10 دقائق</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Search and Filters -->
+    <section class="section">
+      <div class="container">
+        <div class="products-search">
+          <input
+            type="text"
+            id="product-search"
+            placeholder="ابحث عن منتج..."
+            onkeyup="searchProducts()"
+          />
+          <button onclick="searchProducts()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class="products-filters">
+          <button class="filter-btn active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="beverages">
+            المشروبات الصحية
+          </button>
+          <button class="filter-btn" data-filter="supplements">
+            المكملات الغذائية
+          </button>
+          <button class="filter-btn" data-filter="personal-care">
+            العناية الشخصية
+          </button>
+          <button class="filter-btn" data-filter="home-care">
+            العناية بالمنزل
+          </button>
+          <button class="filter-btn" data-filter="energy">الطاقة</button>
+          <button class="filter-btn" data-filter="digestive">
+            الجهاز الهضمي
+          </button>
+          <button class="filter-btn" data-filter="immunity">المناعة</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beverages Section -->
+    <section class="section" id="beverages">
+      <div class="container">
+        <h2 class="section-title">المشروبات الصحية</h2>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card beverages energy">
+            <div class="product-image">
+              <img
+                src="images/products/reishi-coffee.jpg"
+                alt="قهوة لينجزي 3 في 1"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">قهوة لينجزي 3 في 1</h3>
+              <p class="product-description">
+                قهوة فورية مع مستخلص الفطر الريشي، غنية بالفوائد الصحية.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-1"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-1')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card beverages energy">
+            <div class="product-image">
+              <img
+                src="images/products/reishi-coffee-2.jpg"
+                alt="قهوة لينجزي بلاك"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">قهوة لينجزي بلاك</h3>
+              <p class="product-description">
+                قهوة سوداء مع مستخلص الفطر الريشي، بدون سكر أو كريمة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-2"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-2')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card beverages digestive">
+            <div class="product-image">
+              <img src="images/products/cocozhi.jpg" alt="كوكوزي" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">كوكوزي</h3>
+              <p class="product-description">
+                مشروب الكاكاو الصحي مع مستخلص الفطر الريشي، مناسب للأطفال
+                والكبار.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-3"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-3')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card beverages immunity">
+            <div class="product-image">
+              <img src="images/products/lingzhi-tea.jpg" alt="شاي لينجزي" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">شاي لينجزي</h3>
+              <p class="product-description">
+                شاي عشبي مع مستخلص الفطر الريشي، يعزز المناعة ويحسن الصحة
+                العامة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-4"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-4')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supplements Section -->
+    <section class="section" id="supplements">
+      <div class="container">
+        <h2 class="section-title">المكملات الغذائية</h2>
+
+        <div class="products-grid">
+          <!-- Product 5 -->
+          <div class="product-card supplements immunity">
+            <div class="product-image">
+              <img
+                src="images/products/reishi-capsules.jpg"
+                alt="كبسولات لينجزي"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">كبسولات لينجزي</h3>
+              <p class="product-description">
+                مستخلص الفطر الريشي في كبسولات سهلة الاستخدام، لتعزيز المناعة
+                والصحة العامة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-5"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-5')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card supplements immunity">
+            <div class="product-image">
+              <img src="images/products/spirulina.jpg" alt="سبيرولينا" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">سبيرولينا</h3>
+              <p class="product-description">
+                طحالب غنية بالبروتين والفيتامينات والمعادن، تعزز المناعة وتحسن
+                الصحة العامة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-6"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-6')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card supplements energy">
+            <div class="product-image">
+              <img src="images/products/cordyceps.jpg" alt="كورديسبس" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">كورديسبس</h3>
+              <p class="product-description">
+                فطر طبي يعزز الطاقة والقدرة على التحمل، ويحسن وظائف الجهاز
+                التنفسي.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-7"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-7')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card supplements digestive">
+            <div class="product-image">
+              <img src="images/products/lion-mane.jpg" alt="فطر عرف الأسد" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">فطر عرف الأسد</h3>
+              <p class="product-description">
+                فطر طبي يدعم صحة الجهاز العصبي والهضمي، ويحسن وظائف الدماغ
+                والذاكرة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-8"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-8')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Care Section -->
+    <section class="section" id="personal-care">
+      <div class="container">
+        <h2 class="section-title">العناية الشخصية</h2>
+
+        <div class="products-grid">
+          <!-- Product 9 -->
+          <div class="product-card personal-care">
+            <div class="product-image">
+              <img
+                src="images/products/toothpaste.jpg"
+                alt="معجون أسنان جانوزي"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">معجون أسنان جانوزي</h3>
+              <p class="product-description">
+                معجون أسنان طبيعي مع مستخلص الفطر الريشي، يحافظ على صحة الفم
+                واللثة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-9"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-9')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 10 -->
+          <div class="product-card personal-care">
+            <div class="product-image">
+              <img src="images/products/shampoo.jpg" alt="شامبو جانوزي" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">شامبو جانوزي</h3>
+              <p class="product-description">
+                شامبو طبيعي مع مستخلص الفطر الريشي، يغذي فروة الرأس ويقوي الشعر.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-10"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-10')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 11 -->
+          <div class="product-card personal-care">
+            <div class="product-image">
+              <img src="images/products/soap.jpg" alt="صابون جانوزي" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">صابون جانوزي</h3>
+              <p class="product-description">
+                صابون طبيعي مع مستخلص الفطر الريشي، ينظف البشرة ويحافظ على
+                توازنها.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-11"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-11')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 12 -->
+          <div class="product-card personal-care">
+            <div class="product-image">
+              <img src="images/products/cream.jpg" alt="كريم جانوزي" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">كريم جانوزي</h3>
+              <p class="product-description">
+                كريم طبيعي للبشرة مع مستخلص الفطر الريشي، يرطب ويغذي البشرة
+                ويحميها من العوامل الخارجية.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-12"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-12')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Care Section -->
+    <section class="section" id="home-care">
+      <div class="container">
+        <h2 class="section-title">العناية بالمنزل</h2>
+
+        <div class="products-grid">
+          <!-- Product 13 -->
+          <div class="product-card home-care">
+            <div class="product-image">
+              <img src="images/products/detergent.jpg" alt="منظف جانوزي" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">منظف جانوزي</h3>
+              <p class="product-description">
+                منظف طبيعي متعدد الاستخدامات، آمن للاستخدام اليومي وصديق للبيئة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-13"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-13')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 14 -->
+          <div class="product-card home-care">
+            <div class="product-image">
+              <img src="images/products/dish-soap.jpg" alt="سائل غسيل الصحون" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">سائل غسيل الصحون</h3>
+              <p class="product-description">
+                سائل طبيعي لغسيل الصحون، فعال في إزالة الدهون وآمن للاستخدام
+                اليومي.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-14"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-14')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 15 -->
+          <div class="product-card home-care">
+            <div class="product-image">
+              <img src="images/products/laundry.jpg" alt="مسحوق غسيل الملابس" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">مسحوق غسيل الملابس</h3>
+              <p class="product-description">
+                مسحوق طبيعي لغسيل الملابس، فعال في إزالة البقع وآمن للبشرة
+                الحساسة.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-15"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-15')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 16 -->
+          <div class="product-card home-care">
+            <div class="product-image">
+              <img src="images/products/air-freshener.jpg" alt="معطر الجو" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">معطر الجو</h3>
+              <p class="product-description">
+                معطر طبيعي للجو، برائحة منعشة ومنعش للهواء، آمن للاستخدام في
+                المنزل.
+              </p>
+              <div class="product-rating">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-16"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('product-16')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هو الفطر الريشي (لينجزي)؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                الفطر الريشي (لينجزي) هو فطر طبي استخدم في الطب الصيني التقليدي
+                لآلاف السنين. يعرف علمياً باسم Ganoderma lucidum، ويتميز بخصائصه
+                المعززة للمناعة ومضادات الأكسدة. يستخدم لتحسين الصحة العامة
+                وتعزيز طول العمر.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هي فوائد منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>تتميز منتجات DXN بفوائد صحية متعددة، منها:</p>
+              <ul>
+                <li>تعزيز جهاز المناعة</li>
+                <li>تحسين الدورة الدموية</li>
+                <li>دعم صحة الكبد</li>
+                <li>تحسين النوم والاسترخاء</li>
+                <li>تنظيم مستويات السكر في الدم</li>
+                <li>تحسين صحة الجهاز الهضمي</li>
+                <li>مضادات للأكسدة تحمي الخلايا من التلف</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني شراء منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك شراء منتجات DXN من خلال:</p>
+              <ul>
+                <li>
+                  زيارة أقرب فرع DXN إليك (استخدم نظام البحث عن الفروع في
+                  موقعنا)
+                </li>
+                <li>
+                  التواصل معنا مباشرة عبر أرقام الهاتف أو وسائل التواصل
+                  الاجتماعي
+                </li>
+                <li>التسجيل كعضو في DXN للحصول على خصومات وامتيازات إضافية</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>هل منتجات DXN آمنة للاستخدام اليومي؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                نعم، منتجات DXN آمنة للاستخدام اليومي. جميع المنتجات مصنوعة من
+                مكونات طبيعية وتخضع لاختبارات جودة صارمة. ومع ذلك، ننصح دائماً
+                باستشارة الطبيب قبل استخدام أي مكملات غذائية، خاصة للأشخاص الذين
+                يعانون من حالات صحية معينة أو يتناولون أدوية.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني الانضمام إلى DXN كعضو؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك الانضمام إلى DXN كعضو من خلال:</p>
+              <ul>
+                <li>النقر على زر "انضم إلينا" في أعلى الموقع</li>
+                <li>زيارة أقرب فرع DXN وملء نموذج العضوية</li>
+                <li>
+                  التواصل معنا مباشرة للحصول على المساعدة في عملية التسجيل
+                </li>
+              </ul>
+              <p>
+                العضوية في DXN تمنحك فرصة للحصول على المنتجات بأسعار مخفضة،
+                بالإضافة إلى إمكانية بناء عملك الخاص من خلال نظام التسويق
+                المباشر.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container newsletter-container">
+        <h2 class="newsletter-title">اشترك في النشرة الإخبارية</h2>
+        <p class="newsletter-description">
+          احصل على آخر الأخبار والعروض الخاصة مباشرة إلى بريدك الإلكتروني
+        </p>
+
+        <form id="newsletter-form" class="newsletter-form">
+          <input
+            type="email"
+            id="newsletter-email"
+            class="newsletter-input"
+            placeholder="أدخل بريدك الإلكتروني"
+            required
+          />
+          <button type="submit" class="newsletter-btn">اشترك</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img src="images/dxn-logo-white.png" alt="DXN Logo" />
+            </div>
+            <p>
+              نحن فرع تسويقي معتمد لشركة DXN العالمية، نهدف إلى تقديم خدمات
+              واضحة ومباشرة لعملائنا وتوفير المعلومات الكاملة عن منتجات DXN.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://facebook.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://twitter.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://instagram.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://youtube.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul>
+              <li class="footer-link"><a href="index.html">الرئيسية</a></li>
+              <li class="footer-link"><a href="index.html#about">من نحن</a></li>
+              <li class="footer-link">
+                <a href="index.html#products">المنتجات</a>
+              </li>
+              <li class="footer-link">
+                <a href="index.html#branches">الفروع</a>
+              </li>
+              <li class="footer-link">
+                <a href="index.html#contact">اتصل بنا</a>
+              </li>
+              <li class="footer-link"><a href="learn.html">تعلّم</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">المنتجات</h3>
+            <ul>
+              <li class="footer-link">
+                <a href="#beverages">المشروبات الصحية</a>
+              </li>
+              <li class="footer-link">
+                <a href="#supplements">المكملات الغذائية</a>
+              </li>
+              <li class="footer-link">
+                <a href="#personal-care">العناية الشخصية</a>
+              </li>
+              <li class="footer-link">
+                <a href="#home-care">العناية بالمنزل</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">تواصل معنا</h3>
+            <ul>
+              <li class="footer-link">
+                <i class="fas fa-phone"></i> +123 456 7890
+              </li>
+              <li class="footer-link">
+                <i class="fas fa-envelope"></i> info@dxnmarketing.com
+              </li>
+              <li class="footer-link">
+                <i class="fas fa-map-marker-alt"></i> العنوان، المدينة، الدولة
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 DXN Marketing. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Product Modals -->
+    <!-- Modal 1 -->
+    <div class="modal" id="product-modal-1">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">قهوة لينجزي 3 في 1</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="product-details">
+            <div class="product-details-image">
+              <img
+                src="images/products/reishi-coffee.jpg"
+                alt="قهوة لينجزي 3 في 1"
+              />
+            </div>
+            <div class="product-details-info">
+              <h3>قهوة لينجزي 3 في 1</h3>
+              <p>
+                قهوة فورية مميزة من DXN، تجمع بين متعة القهوة وفوائد الفطر
+                الريشي (لينجزي). مزيج مثالي من القهوة والكريمة ومستخلص الفطر
+                الريشي، لتمنحك تجربة مذاق رائعة مع فوائد صحية متعددة.
+              </p>
+
+              <div class="product-details-section">
+                <h4>الفوائد الصحية:</h4>
+                <ul>
+                  <li>تعزيز مستويات الطاقة والتركيز</li>
+                  <li>دعم جهاز المناعة</li>
+                  <li>تحسين الدورة الدموية</li>
+                  <li>المساعدة في تنظيم ضغط الدم</li>
+                  <li>خصائص مضادة للأكسدة</li>
+                  <li>المساعدة في تحسين عملية الهضم</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>المكونات الرئيسية:</h4>
+                <ul>
+                  <li>قهوة فورية عالية الجودة</li>
+                  <li>مستخلص الفطر الريشي (جانوديرما)</li>
+                  <li>كريمة نباتية</li>
+                  <li>سكر</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>طريقة الاستخدام:</h4>
+                <p>
+                  أضف كيس واحد إلى كوب من الماء الساخن (150-200 مل). قلب جيداً
+                  واستمتع بمذاقها الرائع. يفضل تناول 1-2 كوب يومياً.
+                </p>
+              </div>
+
+              <div class="product-details-section">
+                <h4>ملاحظات:</h4>
+                <ul>
+                  <li>مناسبة للاستهلاك اليومي</li>
+                  <li>يمكن تناولها في أي وقت من اليوم</li>
+                  <li>تحفظ في مكان جاف وبارد</li>
+                  <li>غير مناسبة للأطفال دون سن 12 عاماً</li>
+                  <li>استشر طبيبك قبل الاستخدام إذا كنت حاملاً أو مرضعة</li>
+                </ul>
+              </div>
+
+              <div class="product-share">
+                <a href="#" class="product-share-btn" data-platform="facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal" id="product-modal-2">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">قهوة لينجزي بلاك</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="product-details">
+            <div class="product-details-image">
+              <img
+                src="images/products/reishi-coffee-2.jpg"
+                alt="قهوة لينجزي بلاك"
+              />
+            </div>
+            <div class="product-details-info">
+              <h3>قهوة لينجزي بلاك</h3>
+              <p>
+                قهوة سوداء فورية من DXN، مدعمة بمستخلص الفطر الريشي (لينجزي).
+                تتميز بمذاقها القوي والغني، وخالية من السكر والكريمة، مما يجعلها
+                الخيار المثالي لمحبي القهوة السوداء الراغبين في الاستفادة من
+                خصائص الفطر الريشي.
+              </p>
+
+              <div class="product-details-section">
+                <h4>الفوائد الصحية:</h4>
+                <ul>
+                  <li>تعزيز اليقظة والتركيز</li>
+                  <li>دعم عملية التمثيل الغذائي</li>
+                  <li>خالية من السكر (مناسبة لمرضى السكري)</li>
+                  <li>غنية بمضادات الأكسدة</li>
+                  <li>تحسين وظائف الكبد</li>
+                  <li>دعم جهاز المناعة</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>المكونات الرئيسية:</h4>
+                <ul>
+                  <li>قهوة فورية عالية الجودة</li>
+                  <li>مستخلص الفطر الريشي (جانوديرما)</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>طريقة الاستخدام:</h4>
+                <p>
+                  أضف كيس واحد إلى كوب من الماء الساخن (150-200 مل). قلب جيداً
+                  واستمتع بمذاقها القوي. يفضل تناول 1-2 كوب يومياً.
+                </p>
+              </div>
+
+              <div class="product-details-section">
+                <h4>ملاحظات:</h4>
+                <ul>
+                  <li>مناسبة للاستهلاك اليومي</li>
+                  <li>مثالية لمن يفضلون القهوة بدون سكر أو كريمة</li>
+                  <li>تحفظ في مكان جاف وبارد</li>
+                  <li>غير مناسبة للأطفال</li>
+                  <li>
+                    تجنب الاستهلاك المفرط للكافيين خلال فترة الحمل والرضاعة
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product-share">
+                <a href="#" class="product-share-btn" data-platform="facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal" id="product-modal-3">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">كوكوزي</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="product-details">
+            <div class="product-details-image">
+              <img src="images/products/cocozhi.jpg" alt="كوكوزي" />
+            </div>
+            <div class="product-details-info">
+              <h3>كوكوزي</h3>
+              <p>
+                مشروب الكاكاو الصحي من DXN، يجمع بين مذاق الشوكولاتة الغني
+                وفوائد الفطر الريشي (لينجزي). مشروب لذيذ ومغذي مناسب للأطفال
+                والكبار، يمكن تناوله ساخناً أو بارداً.
+              </p>
+
+              <div class="product-details-section">
+                <h4>الفوائد الصحية:</h4>
+                <ul>
+                  <li>غني بمضادات الأكسدة من الكاكاو والفطر الريشي</li>
+                  <li>يعزز المزاج ويحسن الحالة النفسية</li>
+                  <li>يدعم جهاز المناعة</li>
+                  <li>يساعد في تحسين الدورة الدموية</li>
+                  <li>مصدر للطاقة والنشاط</li>
+                  <li>يساعد في تحسين صحة الجهاز الهضمي</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>المكونات الرئيسية:</h4>
+                <ul>
+                  <li>كاكاو عالي الجودة</li>
+                  <li>مستخلص الفطر الريشي (جانوديرما)</li>
+                  <li>سكر</li>
+                  <li>كريمة نباتية</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>طريقة الاستخدام:</h4>
+                <p>
+                  للمشروب الساخن: أضف كيس واحد إلى كوب من الماء الساخن (150-200
+                  مل). قلب جيداً واستمتع.
+                </p>
+                <p>
+                  للمشروب البارد: أضف كيس واحد إلى كوب من الماء البارد، قلب
+                  جيداً، أضف مكعبات الثلج حسب الرغبة.
+                </p>
+              </div>
+
+              <div class="product-details-section">
+                <h4>ملاحظات:</h4>
+                <ul>
+                  <li>مناسب للأطفال والكبار</li>
+                  <li>بديل صحي لمشروبات الشوكولاتة التقليدية</li>
+                  <li>يمكن إضافته إلى الحليب للحصول على مذاق أكثر غنى</li>
+                  <li>تحفظ في مكان جاف وبارد</li>
+                </ul>
+              </div>
+
+              <div class="product-share">
+                <a href="#" class="product-share-btn" data-platform="facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal" id="product-modal-4">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">شاي لينجزي</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="product-details">
+            <div class="product-details-image">
+              <img src="images/products/lingzhi-tea.jpg" alt="شاي لينجزي" />
+            </div>
+            <div class="product-details-info">
+              <h3>شاي لينجزي</h3>
+              <p>
+                شاي عشبي فاخر من DXN، يحتوي على مستخلص الفطر الريشي (لينجزي) مع
+                مزيج من الأعشاب الطبيعية. يتميز بنكهته المنعشة وفوائده الصحية
+                المتعددة، ويعتبر مشروباً مثالياً للاسترخاء والصحة.
+              </p>
+
+              <div class="product-details-section">
+                <h4>الفوائد الصحية:</h4>
+                <ul>
+                  <li>تعزيز جهاز المناعة</li>
+                  <li>مضاد للأكسدة</li>
+                  <li>يساعد في تنقية الجسم من السموم</li>
+                  <li>يدعم صحة الكبد</li>
+                  <li>يساعد في تحسين النوم والاسترخاء</li>
+                  <li>يساعد في تنظيم ضغط الدم</li>
+                  <li>يحسن الدورة الدموية</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>المكونات الرئيسية:</h4>
+                <ul>
+                  <li>مستخلص الفطر الريشي (جانوديرما)</li>
+                  <li>مزيج من الأعشاب الطبيعية</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>طريقة الاستخدام:</h4>
+                <p>
+                  أضف كيس واحد إلى كوب من الماء الساخن (200-250 مل). اتركه لمدة
+                  3-5 دقائق قبل التناول. يفضل تناول 1-3 أكواب يومياً.
+                </p>
+              </div>
+
+              <div class="product-details-section">
+                <h4>ملاحظات:</h4>
+                <ul>
+                  <li>خالي من الكافيين، مناسب للاستهلاك في المساء</li>
+                  <li>يمكن إضافة العسل أو الليمون حسب الرغبة</li>
+                  <li>تحفظ في مكان جاف وبارد</li>
+                  <li>مناسب للاستخدام اليومي</li>
+                  <li>استشر طبيبك قبل الاستخدام إذا كنت حاملاً أو مرضعة</li>
+                </ul>
+              </div>
+
+              <div class="product-share">
+                <a href="#" class="product-share-btn" data-platform="facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal" id="product-modal-5">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">كبسولات لينجزي</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="product-details">
+            <div class="product-details-image">
+              <img
+                src="images/products/reishi-capsules.jpg"
+                alt="كبسولات لينجزي"
+              />
+            </div>
+            <div class="product-details-info">
+              <h3>كبسولات لينجزي</h3>
+              <p>
+                كبسولات مركزة من مستخلص الفطر الريشي (لينجزي) من DXN. توفر هذه
+                الكبسولات جرعة مركزة من الفطر الريشي بشكل سهل الاستخدام، لتعزيز
+                الصحة العامة والمناعة.
+              </p>
+
+              <div class="product-details-section">
+                <h4>الفوائد الصحية:</h4>
+                <ul>
+                  <li>تعزيز جهاز المناعة</li>
+                  <li>مضاد قوي للأكسدة</li>
+                  <li>دعم صحة الكبد</li>
+                  <li>تحسين الدورة الدموية</li>
+                  <li>المساعدة في تنظيم ضغط الدم ومستويات السكر</li>
+                  <li>تحسين النوم والاسترخاء</li>
+                  <li>دعم صحة الجهاز التنفسي</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>المكونات الرئيسية:</h4>
+                <ul>
+                  <li>مستخلص الفطر الريشي (جانوديرما) المركز</li>
+                  <li>كبسولة نباتية</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>طريقة الاستخدام:</h4>
+                <p>تناول 1-2 كبسولة مرتين يومياً مع الماء، يفضل قبل الوجبات.</p>
+              </div>
+
+              <div class="product-details-section">
+                <h4>ملاحظات:</h4>
+                <ul>
+                  <li>مناسبة للاستخدام اليومي</li>
+                  <li>تحفظ في مكان جاف وبارد</li>
+                  <li>تبقى بعيداً عن متناول الأطفال</li>
+                  <li>غير مناسبة للأطفال دون سن 12 عاماً</li>
+                  <li>
+                    استشر طبيبك قبل الاستخدام إذا كنت حاملاً أو مرضعة أو تتناول
+                    أدوية
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product-share">
+                <a href="#" class="product-share-btn" data-platform="facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Popup -->
+    <div class="smart-popup" id="smart-popup">
+      <div class="smart-popup-header">
+        <h3 class="smart-popup-title">اشترك في النشرة الإخبارية!</h3>
+        <button class="smart-popup-close">&times;</button>
+      </div>
+      <div class="smart-popup-content">
+        <p>
+          اشترك الآن للحصول على آخر العروض والمنتجات الجديدة مباشرة إلى بريدك
+          الإلكتروني.
+        </p>
+      </div>
+      <a href="#newsletter-form" class="btn btn-primary">اشترك الآن</a>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

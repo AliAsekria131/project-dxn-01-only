@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلّم - DXN Marketing</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .password-protection {
+            max-width: 500px;
+            margin: 150px auto 50px;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .protected-content {
+            display: none;
+            padding: 50px 0;
+        }
+        
+        .marketing-plan-section {
+            margin-bottom: 50px;
+        }
+        
+        .marketing-plan-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .marketing-plan-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .marketing-steps {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .marketing-steps h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .marketing-steps ol {
+            padding-right: 20px;
+        }
+        
+        .marketing-steps li {
+            margin-bottom: 15px;
+        }
+        
+        .resources-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .resource-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .resource-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .resource-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .resource-content {
+            padding: 20px;
+        }
+        
+        .resource-title {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .resource-description {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/dxn-logo.png" alt="DXN Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#products" class="nav-link">المنتجات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#branches" class="nav-link">الفروع</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#videos" class="nav-link">الفيديوهات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+                </li>
+            </ul>
+            
+            <div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://dxn2u.com/register/123456789" class="btn btn-accent register-btn">انضم إلينا</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Password Protection -->
+    <div class="password-protection" id="password-form">
+        <h2>محتوى محمي</h2>
+        <p>هذه الصفحة محمية بكلمة مرور. يرجى إدخال كلمة المرور للوصول إلى المحتوى.</p>
+        
+        <form id="password-form-element">
+            <div class="form-group">
+                <input type="password" id="password-input" class="form-control" placeholder="كلمة المرور" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">دخول</button>
+        </form>
+    </div>
+
+    <!-- Protected Content -->
+    <div class="protected-content" id="protected-content">
+        <div class="container">
+            <h1 class="section-title">خطة التسويق الاحترافية لمنتجات DXN</h1>
+            
+            <div class="marketing-plan-section">
+                <h2>مقدمة عن التسويق المباشر في DXN</h2>
+                <p>مرحباً بك في عالم التسويق المباشر مع شركة DXN العالمية! تعتبر DXN واحدة من أكبر الشركات العالمية في مجال التسويق المباشر للمنتجات الصحية الطبيعية، وتوفر فرصة رائعة لبناء عمل تجاري خاص بك مع دعم كامل من الشركة.</p>
+                <p>في هذا الدليل الشامل، سنقدم لك خطة تسويقية احترافية تشرح كيفية الربح من DXN من الألف إلى الياء، بدءاً من فهم نظام الشركة وحتى بناء فريق تسويقي ناجح وتحقيق دخل مستدام.</p>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>فهم نظام التسويق في DXN</h2>
+                <div class="marketing-steps">
+                    <h3>كيف يعمل نظام التسويق المباشر في DXN؟</h3>
+                    <p>تعتمد DXN على نظام التسويق الشبكي (Network Marketing) أو التسويق متعدد المستويات (MLM)، وهو نموذج أعمال يتيح للأعضاء الربح من خلال:</p>
+                    <ol>
+                        <li><strong>أرباح البيع المباشر:</strong> تحصل على عمولة من بيع منتجات DXN مباشرة للعملاء.</li>
+                        <li><strong>عمولات الفريق:</strong> تحصل على عمولات من مبيعات الأشخاص الذين قمت بضمهم إلى شبكتك.</li>
+                        <li><strong>مكافآت القيادة:</strong> كلما نما فريقك وزادت مبيعاته، تحصل على مكافآت قيادة إضافية.</li>
+                        <li><strong>حوافز الأداء:</strong> تقدم الشركة حوافز متنوعة مثل الرحلات السياحية والسيارات للأعضاء المتميزين.</li>
+                    </ol>
+                </div>
+                
+                <div class="marketing-steps">
+                    <h3>خطة العمولات في DXN</h3>
+                    <p>تعتمد DXN نظام النقاط (PV - Point Value) لحساب العمولات:</p>
+                    <ol>
+                        <li>كل منتج له قيمة نقطية محددة (PV).</li>
+                        <li>تحصل على عمولة شخصية تتراوح بين 15% إلى 25% من إجمالي النقاط الشهرية لمشترياتك الشخصية.</li>
+                        <li>تحصل على عمولة من مبيعات فريقك تتراوح بين 6% إلى 21% حسب مستواك في خطة التسويق.</li>
+                        <li>كلما ارتفع مستواك في النظام (من Star Agent إلى Crown Ambassador)، زادت نسبة العمولات التي تحصل عليها.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>خطوات بناء عملك الخاص مع DXN</h2>
+                <div class="marketing-steps">
+                    <h3>الخطوة 1: التسجيل والبدء</h3>
+                    <ol>
+                        <li><strong>التسجيل كعضو:</strong> قم بالتسجيل في DXN من خلال رابط الإحالة الخاص بك أو من خلال أقرب فرع.</li>
+                        <li><strong>تعرف على المنتجات:</strong> استخدم منتجات DXN بنفسك لتتمكن من التحدث عنها بثقة وخبرة شخصية.</li>
+                        <li><strong>احضر التدريبات:</strong> شارك في الدورات التدريبية التي تقدمها الشركة لفهم نظام العمل بشكل أفضل.</li>
+                        <li><strong>ضع أهدافاً واضحة:</strong> حدد أهدافك المالية والشخصية من العمل مع DXN.</li>
+                    </ol>
+                </div>
+                
+                <div class="marketing-steps">
+                    <h3>الخطوة 2: بناء قاعدة عملاء</h3>
+                    <ol>
+                        <li><strong>ابدأ بدائرة معارفك:</strong> أصدقاؤك وعائلتك هم أول عملائك المحتملين.</li>
+                        <li><strong>قدم عروضاً تجريبية:</strong> اعرض على الناس تجربة المنتجات مجاناً أو بسعر مخفض.</li>
+                        <li><strong>اجمع الشهادات:</strong> وثق تجارب العملاء الناجحة مع المنتجات واستخدمها في التسويق.</li>
+                        <li><strong>نظم لقاءات تعريفية:</strong> قم بتنظيم لقاءات صغيرة لتعريف الناس بالمنتجات وفرصة العمل.</li>
+                    </ol>
+                </div>
+                
+                <div class="marketing-steps">
+                    <h3>الخطوة 3: التسويق الرقمي</h3>
+                    <ol>
+                        <li><strong>إنشاء حضور رقمي قوي:</strong> أنشئ حسابات على منصات التواصل الاجتماعي المختلفة.</li>
+                        <li><strong>إنشاء محتوى قيم:</strong> شارك معلومات مفيدة عن الصحة والعافية والمنتجات الطبيعية.</li>
+                        <li><strong>استخدم التسويق بالفيديو:</strong> أنشئ مقاطع فيديو قصيرة تشرح فوائد المنتجات وطرق استخدامها.</li>
+                        <li><strong>بناء مجتمع:</strong> أنشئ مجموعات على فيسبوك أو قنوات على تليجرام لبناء مجتمع من المهتمين.</li>
+                        <li><strong>التسويق عبر البريد الإلكتروني:</strong> اجمع قائمة بريدية وأرسل نشرات دورية بالعروض والمعلومات.</li>
+                    </ol>
+                </div>
+                
+                <div class="marketing-steps">
+                    <h3>الخطوة 4: بناء فريق</h3>
+                    <ol>
+                        <li><strong>حدد الأشخاص المناسبين:</strong> ابحث عن أشخاص طموحين ومتحمسين للانضمام إلى فريقك.</li>
+                        <li><strong>قدم الدعم المستمر:</strong> ساعد أعضاء فريقك على النجاح من خلال التدريب والتوجيه المستمر.</li>
+                        <li><strong>نظم اجتماعات دورية:</strong> اعقد اجتماعات أسبوعية أو شهرية لتحفيز الفريق ومشاركة الخبرات.</li>
+                        <li><strong>احتفل بالإنجازات:</strong> اعترف بإنجازات أعضاء فريقك واحتفل بها لتعزيز الروح المعنوية.</li>
+                        <li><strong>كن قدوة:</strong> كن مثالاً يحتذى به في العمل الجاد والالتزام والأخلاق.</li>
+                    </ol>
+                </div>
+                
+                <div class="marketing-steps">
+                    <h3>الخطوة 5: تطوير مهاراتك</h3>
+                    <ol>
+                        <li><strong>مهارات التواصل:</strong> طور قدرتك على التواصل الفعال والإقناع.</li>
+                        <li><strong>مهارات القيادة:</strong> تعلم كيفية قيادة وتحفيز فريقك.</li>
+                        <li><strong>مهارات التسويق الرقمي:</strong> تعلم أساسيات التسويق عبر وسائل التواصل الاجتماعي.</li>
+                        <li><strong>إدارة الوقت:</strong> تعلم كيفية إدارة وقتك بفعالية لتحقيق أقصى إنتاجية.</li>
+                        <li><strong>التعلم المستمر:</strong> اقرأ الكتب وحضر الدورات التدريبية لتطوير نفسك باستمرار.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>إنشاء حسابات التواصل الاجتماعي</h2>
+                <div class="marketing-steps">
+                    <h3>استراتيجية التسويق عبر وسائل التواصل الاجتماعي</h3>
+                    <ol>
+                        <li><strong>اختيار المنصات المناسبة:</strong>
+                            <ul>
+                                <li><strong>فيسبوك:</strong> مثالي للوصول إلى جمهور واسع وإنشاء مجموعات.</li>
+                                <li><strong>انستغرام:</strong> مناسب لعرض الصور الجذابة للمنتجات والنتائج.</li>
+                                <li><strong>تيك توك:</strong> مثالي للوصول إلى الجمهور الشاب من خلال مقاطع فيديو قصيرة وجذابة.</li>
+                                <li><strong>يوتيوب:</strong> مناسب لنشر فيديوهات تعليمية مفصلة عن المنتجات وفوائدها.</li>
+                                <li><strong>تليجرام:</strong> مثالي لإنشاء قنوات وبوتات للتواصل المباشر مع العملاء.</li>
+                            </ul>
+                        </li>
+                        <li><strong>إنشاء هوية بصرية موحدة:</strong> استخدم ألوان وشعارات متناسقة عبر جميع المنصات.</li>
+                        <li><strong>جدولة المحتوى:</strong> ضع خطة لنشر محتوى منتظم (3-5 مرات أسبوعياً على الأقل).</li>
+                        <li><strong>أنواع المحتوى:</strong>
+                            <ul>
+                                <li>معلومات تثقيفية عن الصحة والعافية</li>
+                                <li>شرح فوائد المنتجات وطرق استخدامها</li>
+                                <li>قصص نجاح وشهادات العملاء</li>
+                                <li>عروض وخصومات خاصة</li>
+                                <li>محتوى تفاعلي (استطلاعات، أسئلة، مسابقات)</li>
+                            </ul>
+                        </li>
+                        <li><strong>التفاعل مع الجمهور:</strong> رد على التعليقات والرسائل بسرعة وبشكل احترافي.</li>
+                    </ol>
+                </div>
+                
+                <div class="marketing-steps">
+                    <h3>إنشاء بوتات تليجرام ومجموعات</h3>
+                    <ol>
+                        <li><strong>إنشاء بوت تليجرام:</strong>
+                            <ul>
+                                <li>استخدم BotFather لإنشاء بوت جديد (https://t.me/botfather)</li>
+                                <li>صمم البوت ليقدم معلومات عن المنتجات ويجيب على الأسئلة الشائعة</li>
+                                <li>أضف ميزة الطلب المباشر من خلال البوت</li>
+                                <li>استخدم البوت لجمع بيانات العملاء المحتملين</li>
+                            </ul>
+                        </li>
+                        <li><strong>إنشاء قناة تليجرام:</strong>
+                            <ul>
+                                <li>أنشئ قناة لمشاركة آخر الأخبار والعروض</li>
+                                <li>شارك محتوى حصري للمشتركين في القناة</li>
+                                <li>استخدم القناة للإعلان عن الفعاليات والدورات التدريبية</li>
+                            </ul>
+                        </li>
+                        <li><strong>إنشاء مجموعة تليجرام:</strong>
+                            <ul>
+                                <li>أنشئ مجموعة للعملاء لمناقشة تجاربهم مع المنتجات</li>
+                                <li>أنشئ مجموعة منفصلة لفريق التسويق الخاص بك</li>
+                                <li>نظم جلسات أسئلة وأجوبة مباشرة في المجموعة</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>كيفية تصميم موقع بسيط</h2>
+                <div class="marketing-steps">
+                    <h3>خطوات إنشاء موقع إلكتروني لتسويق منتجات DXN</h3>
+                    <ol>
+                        <li><strong>اختيار منصة سهلة الاستخدام:</strong>
+                            <ul>
+                                <li>WordPress: نظام إدارة محتوى مجاني وسهل الاستخدام</li>
+                                <li>Wix أو Squarespace: منصات سحب وإفلات لا تتطلب مهارات برمجية</li>
+                                <li>Shopify: مثالي إذا كنت تريد إنشاء متجر إلكتروني كامل</li>
+                            </ul>
+                        </li>
+                        <li><strong>حجز اسم نطاق واستضافة:</strong>
+                            <ul>
+                                <li>اختر اسم نطاق سهل التذكر ومرتبط بعملك</li>
+                                <li>اختر خدمة استضافة موثوقة وبسعر معقول</li>
+                            </ul>
+                        </li>
+                        <li><strong>تصميم الموقع:</strong>
+                            <ul>
+                                <li>استخدم قالباً جاهزاً وقم بتخصيصه</li>
+                                <li>استخدم ألوان وشعار DXN مع لمستك الشخصية</li>
+                                <li>تأكد من أن الموقع متوافق مع الأجهزة المحمولة</li>
+                            </ul>
+                        </li>
+                        <li><strong>إنشاء المحتوى الأساسي:</strong>
+                            <ul>
+                                <li>صفحة رئيسية جذابة</li>
+                                <li>صفحة "من نحن" تشرح قصتك مع DXN</li>
+                                <li>صفحة المنتجات مع وصف تفصيلي وصور عالية الجودة</li>
+                                <li>صفحة شهادات العملاء</li>
+                                <li>مدونة لنشر محتوى قيم عن الصحة والعافية</li>
+                                <li>نموذج اتصال وتفاصيل التواصل</li>
+                            </ul>
+                        </li>
+                        <li><strong>إضافة ميزات مفيدة:</strong>
+                            <ul>
+                                <li>نموذج اشتراك في النشرة البريدية</li>
+                                <li>دردشة مباشرة لدعم العملاء</li>
+                                <li>روابط لحساباتك على وسائل التواصل الاجتماعي</li>
+                                <li>نظام حجز المواعيد (للاستشارات الشخصية)</li>
+                            </ul>
+                        </li>
+                        <li><strong>تحسين محركات البحث (SEO):</strong>
+                            <ul>
+                                <li>استخدم كلمات مفتاحية متعلقة بمنتجات DXN والصحة الطبيعية</li>
+                                <li>اكتب عناوين ووصف تعريفي جذاب لكل صفحة</li>
+                                <li>استخدم روابط داخلية بين صفحات موقعك</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>الموارد التسويقية</h2>
+                <p>فيما يلي مجموعة من الموارد التسويقية التي يمكنك استخدامها لتعزيز جهودك التسويقية:</p>
+                
+                <div class="resources-section">
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="images/resources/company-info.jpg" alt="معلومات عن الشركة">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">معلومات مختصرة عن الشركة</h3>
+                            <p class="resource-description">ملف PDF يحتوي على معلومات شاملة عن شركة DXN وتاريخها ورؤيتها.</p>
+                            <a href="resources/dxn-company-info.pdf" class="btn btn-primary" download>تحميل الملف</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="images/resources/products-catalog.jpg" alt="كتالوج المنتجات">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">كتالوج المنتجات</h3>
+                            <p class="resource-description">ملف PDF يحتوي على وصف تفصيلي لجميع منتجات DXN مع الصور والأسعار.</p>
+                            <a href="resources/dxn-products-catalog.pdf" class="btn btn-primary" download>تحميل الملف</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="images/resources/marketing-plan.jpg" alt="خطة التسويق">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">خطة التسويق التفصيلية</h3>
+                            <p class="resource-description">ملف PDF يشرح خطة العمولات ونظام المكافآت في DXN بالتفصيل.</p>
+                            <a href="resources/dxn-marketing-plan.pdf" class="btn btn-primary" download>تحميل الملف</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="images/resources/social-media-templates.jpg" alt="قوالب التواصل الاجتماعي">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">قوالب التواصل الاجتماعي</h3>
+                            <p class="resource-description">مجموعة من القوالب الجاهزة للنشر على منصات التواصل الاجتماعي.</p>
+                            <a href="resources/dxn-social-media-templates.zip" class="btn btn-primary" download>تحميل الملف</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="images/resources/presentation-templates.jpg" alt="قوالب العروض التقديمية">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">قوالب العروض التقديمية</h3>
+                            <p class="resource-description">عروض PowerPoint جاهزة للاستخدام في اللقاءات التعريفية والتدريبية.</p>
+                            <a href="resources/dxn-presentation-templates.zip" class="btn btn-primary" download>تحميل الملف</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="images/resources/website-templates.jpg" alt="قوالب المواقع">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">قوالب المواقع الإلكترونية</h3>
+                            <p class="resource-description">قوالب HTML جاهزة لإنشاء موقع إلكتروني احترافي لتسويق منتجات DXN.</p>
+                            <a href="resources/dxn-website-templates.zip" class="btn btn-primary" download>تحميل الملف</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>نصائح للنجاح في التسويق المباشر</h2>
+                <div class="marketing-steps">
+                    <ol>
+                        <li><strong>كن صادقاً ومخلصاً:</strong> الصدق هو أساس بناء الثقة مع عملائك وفريقك.</li>
+                        <li><strong>ركز على القيمة:</strong> قدم قيمة حقيقية للناس قبل أن تطلب منهم الشراء أو الانضمام.</li>
+                        <li><strong>كن صبوراً:</strong> بناء عمل ناجح يستغرق وقتاً، لا تتوقع نتائج فورية.</li>
+                        <li><strong>استمر في التعلم:</strong> اقرأ وتعلم باستمرار لتطوير مهاراتك ومعرفتك.</li>
+                        <li><strong>ابنِ علاقات:</strong> التسويق المباشر يعتمد على العلاقات، اهتم بالناس وليس فقط بالمبيعات.</li>
+                        <li><strong>كن قدوة:</strong> استخدم المنتجات بنفسك وكن مثالاً للنمط الصحي الذي تروج له.</li>
+                        <li><strong>تعامل مع الرفض بإيجابية:</strong> الرفض جزء من العملية، تعلم منه وتحسن.</li>
+                        <li><strong>حافظ على التوازن:</strong> وازن بين عملك وحياتك الشخصية لتجنب الإرهاق.</li>
+                        <li><strong>احتفل بالإنجازات الصغيرة:</strong> احتفل بكل خطوة نجاح، مهما كانت صغيرة.</li>
+                        <li><strong>استمتع بالرحلة:</strong> استمتع بالعملية وليس فقط بالنتائج النهائية.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="marketing-plan-section">
+                <h2>الخلاصة</h2>
+                <p>التسويق المباشر مع DXN يمكن أن يكون فرصة رائعة لبناء عمل مربح ومستدام، ولكنه يتطلب الالتزام والصبر والعمل الجاد. باتباع الخطوات والاستراتيجيات المذكورة في هذا الدليل، ستكون على الطريق الصحيح لتحقيق النجاح في عالم التسويق المباشر.</p>
+                <p>تذكر أن النجاح في هذا المجال لا يأتي بين عشية وضحاها، بل هو نتيجة للجهود المستمرة والتعلم المستمر والتكيف مع التغييرات في السوق. استمر في التطور والنمو، وستحقق أهدافك مع DXN.</p>
+                <p>نتمنى لك التوفيق والنجاح في رحلتك مع DXN!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/dxn-logo-white.png" alt="DXN Logo">
+                    </div>
+                    <p>نحن فرع تسويقي معتمد لشركة DXN العالمية، نهدف إلى تقديم خدمات واضحة ومباشرة لعملائنا وتوفير المعلومات الكاملة عن منتجات DXN.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/dxnmarketing" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/dxnmarketing" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/dxnmarketing" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/dxnmarketing" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul>
+                        <li class="footer-link"><a href="index.html">الرئيسية</a></li>
+                        <li class="footer-link"><a href="index.html#about">من نحن</a></li>
+                        <li class="footer-link"><a href="index.html#products">المنتجات</a></li>
+                        <li class="footer-link"><a href="index.html#branches">الفروع</a></li>
+                        <li class="footer-link"><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">المنتجات</h3>
+                    <ul>
+                        <li class="footer-link"><a href="products.html#beverages">المشروبات الصحية</a></li>
+                        <li class="footer-link"><a href="products.html#supplements">المكملات الغذائية</a></li>
+                        <li class="footer-link"><a href="products.html#personal-care">العناية الشخصية</a></li>
+                        <li class="footer-link"><a href="products.html#home-care">العناية بالمنزل</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <ul>
+                        <li class="footer-link"><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li class="footer-link"><i class="fas fa-envelope"></i> info@dxnmarketing.com</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> العنوان، المدينة، الدولة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DXN Marketing. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordForm = document.getElementById('password-form-element');
+            const passwordFormContainer = document.getElementById('password-form');
+            const protectedContent = document.getElementById('protected-content');
+            
+            if (passwordForm) {
+                passwordForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const passwordInput = document.getElementById('password-input');
+                    const password = passwordInput.value;
+                    
+                    if (password === 'ali1234asekria1234') {
+                        passwordFormContainer.style.display = 'none';
+                        protectedContent.style.display = 'block';
+                        
+                        // Save in session storage to keep user logged in during this session
+                        sessionStorage.setItem('dxn_auth', 'true');
+                    } else {
+                        alert('كلمة المرور غير صحيحة. يرجى المحاولة مرة أخرى.');
+                        passwordInput.value = '';
+                    }
+                });
+            }
+            
+            // Check if user is already authenticated
+            if (sessionStorage.getItem('dxn_auth') === 'true') {
+                passwordFormContainer.style.display = 'none';
+                protectedContent.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
