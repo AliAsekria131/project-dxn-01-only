@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منتجات DXN - منتجات طبيعية للصحة والعافية</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="my-cumtem-edit-in-header">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../images/dxn-logo.png" alt="DXN Logo" />
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#about" class="nav-link">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#products" class="nav-link">المنتجات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#branches" class="nav-link">الفروع</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#videos" class="nav-link">الفيديوهات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#contact-info" class="nav-link">اتصل بنا</a>
+            </li>
+
+            <div class="toggle-in-list">
+              <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+              </button>
+              <a
+                href="https://dxn2u.com/register/123456789"
+                class="btn btn-accent register-btn"
+                >انضم إلينا</a
+              >
+            </div>
+          </ul>
+        </div>
+        <div class="toggle-out-list">
+          <a
+            href="https://dxn2u.com/register/123456789"
+            class="btn btn-accent register-btn"
+            >انضم إلينا</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Header -->
+    <!-- <section class="products-header">
+      <div class="container">
+        <h1>المشروبات الصحة</h1>
+        <p>استكشف مجموعة واسعة من المشروبات الصحية</p>
+      </div>
+    </section> -->
+
+    <!-- Customer Dashboard -->
+    <!-- <section class="section">
+      <div class="container">
+        <div class="dashboard-container">
+          <div class="dashboard-header">
+            <h2 class="dashboard-title">لوحة تحكم العميل</h2>
+          </div>
+
+          <div class="dashboard-tabs">
+            <div class="dashboard-tab active" data-tab="recent">
+              المنتجات التي زرتها مؤخراً
+            </div>
+            <div class="dashboard-tab" data-tab="suggested">
+              المنتجات المقترحة
+            </div>
+            <div class="dashboard-tab" data-tab="favorites">المفضلة</div>
+          </div>
+
+          <div class="dashboard-content">
+            <div class="recent-products">
+              <div class="recent-product">
+                <img
+                  src="images/products/reishi-coffee.jpg"
+                  alt="قهوة الريشي"
+                />
+                <div class="recent-product-info">
+                  <h4>قهوة الريشي</h4>
+                  <p>زيارة منذ 2 دقيقة</p>
+                </div>
+              </div>
+
+              <div class="recent-product">
+                <img src="images/products/spirulina.jpg" alt="سبيرولينا" />
+                <div class="recent-product-info">
+                  <h4>سبيرولينا</h4>
+                  <p>زيارة منذ 5 دقائق</p>
+                </div>
+              </div>
+
+              <div class="recent-product">
+                <img src="images/products/cordyceps.jpg" alt="كورديسبس" />
+                <div class="recent-product-info">
+                  <h4>كورديسبس</h4>
+                  <p>زيارة منذ 10 دقائق</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Products Search and Filters -->
+    <section class="section" style="padding-bottom: 0px !important">
+      <div class="container">
+        <div class="products-search">
+          <input
+            type="text"
+            id="product-search"
+            placeholder="ابحث عن منتج..."
+            onkeyup="searchProducts()"
+          />
+          <button onclick="searchProducts()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- <div class="products-filters">
+          <button class="filter-btn active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="beverages">
+            المشروبات الصحية
+          </button>
+          <button class="filter-btn" data-filter="supplements">
+            المكملات الغذائية
+          </button>
+          <button class="filter-btn" data-filter="personal-care">
+            العناية الشخصية
+          </button>
+          <button class="filter-btn" data-filter="home-care">
+            العناية بالمنزل
+          </button>
+          <button class="filter-btn" data-filter="energy">الطاقة</button>
+          <button class="filter-btn" data-filter="digestive">
+            الجهاز الهضمي
+          </button>
+          <button class="filter-btn" data-filter="immunity">المناعة</button>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Beverages Section -->
+    <section class="section" id="coffee">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-arrow-left"></i>القهوة</h2>
+
+        <div class="products-grid">
+          <!-- DXN Civattino Coffee -->
+          <!-- Product 1 x-->
+          <div class="product-card coffee energy">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/civattino.jpg"
+                alt="قهوة DXN سيفاتينو"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">DXN Civattino Coffee</h3>
+              <p class="product-description">
+                قهوة لذيذة وغنية بنكهة الفطر الغانوديرما، تعزز الطاقة والتركيز
+                بشكل طبيعي.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-1"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('dxn-civattino-coffee')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 x-->
+          <!-- Product 3 x-->
+          <!-- Product 4 x-->
+          <!-- Product 5 x-->
+          <!-- Product 6 x-->
+          <!-- Product 7 x-->
+          <!-- Product 8 x-->
+          <!-- Product 9 x-->
+          <!-- Product 10 x-->
+        </div>
+      </div>
+    </section>
+
+    <!-- Supplements Section -->
+    <section class="section" id="supplements">
+      <div class="container">
+        <h2 class="section-title">المكملات الغذائية</h2>
+
+        <div class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Personal Care Section -->
+    <section class="section" id="personal-care">
+      <div class="container">
+        <h2 class="section-title">العناية الشخصية</h2>
+
+        <div class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Home Care Section -->
+    <section class="section" id="home-care">
+      <div class="container">
+        <h2 class="section-title">العناية بالمنزل</h2>
+
+        <div class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هو الفطر الريشي (لينجزي)؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                الفطر الريشي (لينجزي) هو فطر طبي استخدم في الطب الصيني التقليدي
+                لآلاف السنين. يعرف علمياً باسم Ganoderma lucidum، ويتميز بخصائصه
+                المعززة للمناعة ومضادات الأكسدة. يستخدم لتحسين الصحة العامة
+                وتعزيز طول العمر.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هي فوائد منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>تتميز منتجات DXN بفوائد صحية متعددة، منها:</p>
+              <ul>
+                <li>تعزيز جهاز المناعة</li>
+                <li>تحسين الدورة الدموية</li>
+                <li>دعم صحة الكبد</li>
+                <li>تحسين النوم والاسترخاء</li>
+                <li>تنظيم مستويات السكر في الدم</li>
+                <li>تحسين صحة الجهاز الهضمي</li>
+                <li>مضادات للأكسدة تحمي الخلايا من التلف</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني شراء منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك شراء منتجات DXN من خلال:</p>
+              <ul>
+                <li>
+                  زيارة أقرب فرع DXN إليك (استخدم نظام البحث عن الفروع في
+                  موقعنا)
+                </li>
+                <li>
+                  التواصل معنا مباشرة عبر أرقام الهاتف أو وسائل التواصل
+                  الاجتماعي
+                </li>
+                <li>التسجيل كعضو في DXN للحصول على خصومات وامتيازات إضافية</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>هل منتجات DXN آمنة للاستخدام اليومي؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                نعم، منتجات DXN آمنة للاستخدام اليومي. جميع المنتجات مصنوعة من
+                مكونات طبيعية وتخضع لاختبارات جودة صارمة. ومع ذلك، ننصح دائماً
+                باستشارة الطبيب قبل استخدام أي مكملات غذائية، خاصة للأشخاص الذين
+                يعانون من حالات صحية معينة أو يتناولون أدوية.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني الانضمام إلى DXN كعضو؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك الانضمام إلى DXN كعضو من خلال:</p>
+              <ul>
+                <li>النقر على زر "انضم إلينا" في أعلى الموقع</li>
+                <li>زيارة أقرب فرع DXN وملء نموذج العضوية</li>
+                <li>
+                  التواصل معنا مباشرة للحصول على المساعدة في عملية التسجيل
+                </li>
+              </ul>
+              <p>
+                العضوية في DXN تمنحك فرصة للحصول على المنتجات بأسعار مخفضة،
+                بالإضافة إلى إمكانية بناء عملك الخاص من خلال نظام التسويق
+                المباشر.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img src="../images/dxn-logo.png" alt="DXN Logo" />
+            </div>
+            <p>
+              نحن فرع تسويقي معتمد لشركة DXN العالمية، نهدف إلى تقديم خدمات
+              واضحة ومباشرة لعملائنا وتوفير المعلومات الكاملة عن منتجات DXN.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://facebook.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://twitter.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://instagram.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://youtube.com/dxnmarketing"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul>
+              <li class="footer-link"><a href="index.html">الرئيسية</a></li>
+              <li class="footer-link"><a href="index.html#about">من نحن</a></li>
+              <li class="footer-link">
+                <a href="index.html#products">المنتجات</a>
+              </li>
+              <li class="footer-link">
+                <a href="index.html#branches">الفروع</a>
+              </li>
+              <li class="footer-link">
+                <a href="index.html#contact">اتصل بنا</a>
+              </li>
+              <li class="footer-link"><a href="learn.html">تعلّم</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">المنتجات</h3>
+            <ul>
+              <li class="footer-link">
+                <a href="#beverages">المشروبات الصحية</a>
+              </li>
+              <li class="footer-link">
+                <a href="#supplements">المكملات الغذائية</a>
+              </li>
+              <li class="footer-link">
+                <a href="#personal-care">العناية الشخصية</a>
+              </li>
+              <li class="footer-link">
+                <a href="#home-care">العناية بالمنزل</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">تواصل معنا</h3>
+            <ul>
+              <li class="footer-link">
+                <i class="fas fa-phone"></i> +123 456 7890
+              </li>
+              <li class="footer-link">
+                <i class="fas fa-envelope"></i> info@dxnmarketing.com
+              </li>
+              <li class="footer-link">
+                <i class="fas fa-map-marker-alt"></i> العنوان، المدينة، الدولة
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 DXN Marketing. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Product Modals -->
+    <!-- Modal 1 -->
+    <div class="modal" id="product-modal-1">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">قهوة لينجزي 3 في 1</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="product-details">
+            <div class="product-details-image">
+              <img
+                src="images/products/reishi-coffee.jpg"
+                alt="قهوة لينجزي 3 في 1"
+              />
+            </div>
+            <div class="product-details-info">
+              <h3>قهوة لينجزي 3 في 1</h3>
+              <p>
+                قهوة فورية مميزة من DXN، تجمع بين متعة القهوة وفوائد الفطر
+                الريشي (لينجزي). مزيج مثالي من القهوة والكريمة ومستخلص الفطر
+                الريشي، لتمنحك تجربة مذاق رائعة مع فوائد صحية متعددة.
+              </p>
+
+              <div class="product-details-section">
+                <h4>الفوائد الصحية:</h4>
+                <ul>
+                  <li>تعزيز مستويات الطاقة والتركيز</li>
+                  <li>دعم جهاز المناعة</li>
+                  <li>تحسين الدورة الدموية</li>
+                  <li>المساعدة في تنظيم ضغط الدم</li>
+                  <li>خصائص مضادة للأكسدة</li>
+                  <li>المساعدة في تحسين عملية الهضم</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>المكونات الرئيسية:</h4>
+                <ul>
+                  <li>قهوة فورية عالية الجودة</li>
+                  <li>مستخلص الفطر الريشي (جانوديرما)</li>
+                  <li>كريمة نباتية</li>
+                  <li>سكر</li>
+                </ul>
+              </div>
+
+              <div class="product-details-section">
+                <h4>طريقة الاستخدام:</h4>
+                <p>
+                  أضف كيس واحد إلى كوب من الماء الساخن (150-200 مل). قلب جيداً
+                  واستمتع بمذاقها الرائع. يفضل تناول 1-2 كوب يومياً.
+                </p>
+              </div>
+
+              <div class="product-details-section">
+                <h4>ملاحظات:</h4>
+                <ul>
+                  <li>مناسبة للاستهلاك اليومي</li>
+                  <li>يمكن تناولها في أي وقت من اليوم</li>
+                  <li>تحفظ في مكان جاف وبارد</li>
+                  <li>غير مناسبة للأطفال دون سن 12 عاماً</li>
+                  <li>استشر طبيبك قبل الاستخدام إذا كنت حاملاً أو مرضعة</li>
+                </ul>
+              </div>
+
+              <div class="product-share">
+                <a href="#" class="product-share-btn" data-platform="facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="product-share-btn" data-platform="telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
