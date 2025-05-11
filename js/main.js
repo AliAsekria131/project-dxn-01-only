@@ -198,6 +198,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedCity = this.value;
       tbody.innerHTML = "";
 
+      // مسح البطاقات السابقة
+      const cardsContainer = document.getElementById("branches-cards");
+      cardsContainer.innerHTML = ""; // مسح البطاقات السابقة
+
       if (selectedCountry && selectedCity) {
         const branches = branchData[selectedCountry].branches.filter(
           (branch) => branch.city === selectedCity
@@ -219,7 +223,6 @@ document.addEventListener("DOMContentLoaded", function () {
           );
 
           // بطاقة
-          const cardsContainer = document.getElementById("branches-cards");
           cardsContainer.insertAdjacentHTML(
             "beforeend",
             `
