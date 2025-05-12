@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المكملات الغذائية والصحية</title>
+    <link rel="icon" href="images/dxn-logo.png" type="image/png" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        overflow: auto;
+        padding: 40px 20px;
+      }
+
+      .modal-content {
+        background: #fff;
+        margin: auto;
+        padding: 30px;
+        max-width: 600px;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .modal-content img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+
+      .modal-content h2 {
+        margin: 0 0 10px;
+        color: #333;
+        font-size: 24px;
+      }
+
+      .modal-content p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .modal .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        color: #888;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="my-cumtem-edit-in-header">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../images/dxn-logo.png" alt="DXN Logo" />
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#about" class="nav-link">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#products" class="nav-link">المنتجات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#branches" class="nav-link">الفروع</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#videos" class="nav-link">الفيديوهات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#contact-info" class="nav-link">اتصل بنا</a>
+            </li>
+
+            <div class="toggle-in-list">
+              <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+              </button>
+              <a
+              href="https://eworld.dxn2u.com/s/accreg/ar/827460502"
+              class="btn btn-accent register-btn"
+              >انضم إلينا</a
+            >
+            </div>
+          </ul>
+        </div>
+        <div class="toggle-out-list">
+          <a
+            href="https://eworld.dxn2u.com/s/accreg/ar/827460502"
+            class="btn btn-accent register-btn"
+            >انضم إلينا</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Search and Filters -->
+    <section class="section" style="padding-bottom: 0px !important">
+      <div class="container">
+        <div class="products-search">
+          <input
+            type="text"
+            id="product-search"
+            placeholder="ابحث عن منتج..."
+            onkeyup="searchProducts()"
+          />
+          <button onclick="searchProducts()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supplements Section -->
+    <section class="section" id="supplements">
+      <div class="container">
+        <h2 class="section-title">المكملات الغذائية</h2>
+        <div class="products-grid">
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/HDS/abm_front.jpg"
+                alt="ABM Mushroom Powder"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">ABM Mushroom Powder</h3>
+              <p class="product-description">
+                بودرة فطر أبيض البرازيل (ABM) من DXN.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-abm"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('abm')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/androg1.jpg" alt="Andro-G" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Andro-G</h3>
+              <p class="product-description">
+                مكمل عشبي يحتوي على أندروغرافيس من DXN.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-androg"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('androg')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/bcp_30.jpg" alt="Black Cumin Plus" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Black Cumin Plus</h3>
+              <p class="product-description">
+                مكمل غذائي من DXN يحتوي على الحبة السوداء.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-bcp"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('bcp')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/beepollen.jpg" alt="Bee Pollen" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Bee Pollen</h3>
+              <p class="product-description">
+                غذاء ملكات النحل الطبيعي من DXN.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-beepollen"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('beepollen')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/HDS/gg-p-90_front.jpg"
+                alt="Ganocelium GL 90"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Ganocelium GL 90</h3>
+              <p class="product-description">
+                مستخلص فطر الجانوديرما – خلية فطرية من DXN.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-gl90"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('gl90')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/gl-powder-front.jpg" alt="Ganocelium Powder" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Ganocelium Powder</h3>
+              <p class="product-description">بودرة خلايا فطر الجانوديرما GL من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-glpowder">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('glpowder')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/gl.jpg" alt="Ganocelium GL" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Ganocelium GL</h3>
+              <p class="product-description">كبسولات الجانوسليوم GL من خلاصة الجانوديرما.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-gl">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('gl')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF102_Ros-L_30g.jpg" alt="Roselle Juice Powder" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Roselle Juice Powder</h3>
+              <p class="product-description">بودرة عصير الكركديه (Roselle) من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-roselle">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('roselle')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF126_Ligno-L_Powder_40g.jpg" alt="Ligno-L Powder" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Ligno-L Powder</h3>
+              <p class="product-description">مسحوق الفطر العلاجي لينجوزس (Ligno-L) من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-ligno">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('ligno')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF145_Hong-T_90.jpg" alt="Hong T 90" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Hong T 90</h3>
+              <p class="product-description">مكمل غذائي عشبي داعم للطاقة من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-hongt">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('hongt')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF168_Wild_Bettel.jpg" alt="Wild Bettel Leaf" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Wild Bettel Leaf</h3>
+              <p class="product-description">مكمل عشبي مستخلص من أوراق البيتل البرّية.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-bettel">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('bettel')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF191_Lighoney_Syrup.jpg" alt="Lighoney Syrup" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Lighoney Syrup</h3>
+              <p class="product-description">شراب العسل الطبيعي الخفيف من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-lighoney">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('lighoney')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF231_DXN_Zhicurcu_Capsule_30.jpg" alt="Zhi Curcumin" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Zhi Curcumin</h3>
+              <p class="product-description">كبسولات الزنجبيل والكركم الطبيعي من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-zhicurcumin">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('zhicurcumin')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/HF262_DXN_FulingPlus_Pill.jpg" alt="Fuling Plus" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Fuling Plus</h3>
+              <p class="product-description">حبوب فطر فولينغ بلس لدعم المناعة من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-fulingplus">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('fulingplus')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/lignosus_bottle.jpg" alt="Lignosus Rhinocerus" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Lignosus Rhinocerus</h3>
+              <p class="product-description">منتج يحتوي على فطر لينجوسوس النادر من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-lignosus">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('lignosus')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/mane.jpg" alt="Lion's Mane" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Lion's Mane</h3>
+              <p class="product-description">فطر عرف الأسد الشهير لدعم الجهاز العصبي.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-mane">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('mane')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/Mengkudu-cap30.jpg" alt="Morinzhi (Mengkudu)" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Morinzhi (Mengkudu)</h3>
+              <p class="product-description">مورنزي - مستخلص فاكهة النوني (مينكودو) من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-morinzhi">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('morinzhi')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/monascus.jpg" alt="Monascus" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Monascus</h3>
+              <p class="product-description">مكمل طبيعي لتنظيم الدهون والكوليسترول.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-monascus">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('monascus')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/mycoveggie.jpg" alt="MycoVeggie" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">MycoVeggie</h3>
+              <p class="product-description">خليط الخضروات الغني بالألياف والفطر من DXN.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-mycoveggie">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('mycoveggie')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/mycovita.jpg" alt="MycoVita" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">MycoVita</h3>
+              <p class="product-description">مكمل غذائي فطري غني بالفيتامينات لدعم الطاقة والمناعة.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-mycovita">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('mycovita')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/HDS/pearl_powder.jpg" alt="Pearl Powder" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Pearl Powder</h3>
+              <p class="product-description">بودرة اللؤلؤ الطبيعية لدعم نضارة البشرة وصحة الجسم.</p>
+              <div class="product-actions">
+                <button class="btn btn-primary btn-details" data-modal="product-modal-pearl">
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('pearl')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هو الفطر الريشي (لينجزي)؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                الفطر الريشي (لينجزي) هو فطر طبي استخدم في الطب الصيني التقليدي
+                لآلاف السنين. يعرف علمياً باسم Ganoderma lucidum، ويتميز بخصائصه
+                المعززة للمناعة ومضادات الأكسدة. يستخدم لتحسين الصحة العامة
+                وتعزيز طول العمر.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هي فوائد منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>تتميز منتجات DXN بفوائد صحية متعددة، منها:</p>
+              <ul>
+                <li>تعزيز جهاز المناعة</li>
+                <li>تحسين الدورة الدموية</li>
+                <li>دعم صحة الكبد</li>
+                <li>تحسين النوم والاسترخاء</li>
+                <li>تنظيم مستويات السكر في الدم</li>
+                <li>تحسين صحة الجهاز الهضمي</li>
+                <li>مضادات للأكسدة تحمي الخلايا من التلف</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني شراء منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك شراء منتجات DXN من خلال:</p>
+              <ul>
+                <li>
+                  زيارة أقرب فرع DXN إليك (استخدم نظام البحث عن الفروع في
+                  موقعنا)
+                </li>
+                <li>
+                  التواصل معنا مباشرة عبر أرقام الهاتف أو وسائل التواصل
+                  الاجتماعي
+                </li>
+                <li>التسجيل كعضو في DXN للحصول على خصومات وامتيازات إضافية</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>هل منتجات DXN آمنة للاستخدام اليومي؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                نعم، منتجات DXN آمنة للاستخدام اليومي. جميع المنتجات مصنوعة من
+                مكونات طبيعية وتخضع لاختبارات جودة صارمة. ومع ذلك، ننصح دائماً
+                باستشارة الطبيب قبل استخدام أي مكملات غذائية، خاصة للأشخاص الذين
+                يعانون من حالات صحية معينة أو يتناولون أدوية.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني الانضمام إلى DXN كعضو؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك الانضمام إلى DXN كعضو من خلال:</p>
+              <ul>
+                <li>النقر على زر "انضم إلينا" في أعلى الموقع</li>
+                <li>زيارة أقرب فرع DXN وملء نموذج العضوية</li>
+                <li>
+                  التواصل معنا مباشرة للحصول على المساعدة في عملية التسجيل
+                </li>
+              </ul>
+              <p>
+                العضوية في DXN تمنحك فرصة للحصول على المنتجات بأسعار مخفضة،
+                بالإضافة إلى إمكانية بناء عملك الخاص من خلال نظام التسويق
+                المباشر.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="../images/dxn-logo.png" alt="DXN Logo" />
+          </div>
+          <p>
+            نحن فرع تسويقي معتمد لشركة DXN العالمية، نهدف إلى تقديم خدمات
+            واضحة ومباشرة لعملائنا وتوفير المعلومات الكاملة عن منتجات DXN.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/lamha.666"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/lamha.comm?igsh=bzBpdzd4aTk0Y3Y0"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UC6XnyAbLYCX_aebDQmc6Gag"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">روابط سريعة</h3>
+          <ul>
+            <li class="footer-link"><a href="#">الرئيسية</a></li>
+            <li class="footer-link"><a href="#about">من نحن</a></li>
+            <li class="footer-link"><a href="#products">المنتجات</a></li>
+            <li class="footer-link"><a href="#branches">الفروع</a></li>
+            <li class="footer-link"><a href="#contact">اتصل بنا</a></li>
+            <li class="footer-link"><a href="learn.html">تعلّم</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">المنتجات</h3>
+          <ul>
+            <li class="footer-link">
+              <a href="products.html#beverages">المشروبات الصحية</a>
+            </li>
+            <li class="footer-link">
+              <a href="products.html#supplements">المكملات الغذائية</a>
+            </li>
+            <li class="footer-link">
+              <a href="products.html#personal-care">العناية الشخصية</a>
+            </li>
+            <li class="footer-link">
+              <a href="products.html#home-care">العناية بالمنزل</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">تواصل معنا</h3>
+          <ul>
+            <li class="footer-link">
+              <i class="fas fa-phone"></i> +963 930816902
+            </li>
+            <li class="footer-link">
+              <i class="fas fa-envelope"></i> aliasekria263@gmail.com
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Lamha. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+      function openGoogleSearch(productName) {
+        const searchQuery = encodeURIComponent(`${productName} DXN arabic`); // ترميز اسم المنتج
+        const searchUrl = `https://www.google.com/search?q=${searchQuery}&hl=ar `; // بحث بالعربية
+        window.open(searchUrl, "_blank");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const detailButtons = document.querySelectorAll(".btn-details");
+        detailButtons.forEach((button) => {
+          const productName = button
+            .closest(".product-content")
+            .querySelector(".product-title").innerText;
+          button.onclick = function () {
+            openGoogleSearch(productName);
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

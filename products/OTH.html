@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الادوات المنزلية</title>
+    <link rel="icon" href="images/dxn-logo.png" type="image/png" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        overflow: auto;
+        padding: 40px 20px;
+      }
+
+      .modal-content {
+        background: #fff;
+        margin: auto;
+        padding: 30px;
+        max-width: 600px;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .modal-content img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+
+      .modal-content h2 {
+        margin: 0 0 10px;
+        color: #333;
+        font-size: 24px;
+      }
+
+      .modal-content p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .modal .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        color: #888;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="my-cumtem-edit-in-header">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../images/dxn-logo.png" alt="DXN Logo" />
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#about" class="nav-link">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#products" class="nav-link">المنتجات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#branches" class="nav-link">الفروع</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#videos" class="nav-link">الفيديوهات</a>
+            </li>
+            <li class="nav-item">
+              <a href="../index.html#contact-info" class="nav-link">اتصل بنا</a>
+            </li>
+
+            <div class="toggle-in-list">
+              <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+              </button>
+              <a
+              href="https://eworld.dxn2u.com/s/accreg/ar/827460502"
+              class="btn btn-accent register-btn"
+              >انضم إلينا</a
+            >
+            </div>
+          </ul>
+        </div>
+        <div class="toggle-out-list">
+          <a
+            href="https://eworld.dxn2u.com/s/accreg/ar/827460502"
+            class="btn btn-accent register-btn"
+            >انضم إلينا</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Search and Filters -->
+    <section class="section" style="padding-bottom: 0px !important">
+      <div class="container">
+        <div class="products-search">
+          <input
+            type="text"
+            id="product-search"
+            placeholder="ابحث عن منتج..."
+            onkeyup="searchProducts()"
+          />
+          <button onclick="searchProducts()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supplements Section -->
+    <section class="section" id="supplements">
+      <div class="container">
+        <h2 class="section-title">الادوات المنزلية</h2>
+        <div class="products-grid">
+            <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/coffee_distiller.jpg" alt="Coffee Distiller" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Coffee Distiller</h3>
+                  <p class="product-description">جهاز تقطير القهوة لتحضير قهوة لذيذة بسرعة وسهولة.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-coffee-distiller">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('coffee-distiller')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/cooker_set.jpg" alt="Cooker Set" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Cooker Set</h3>
+                  <p class="product-description">مجموعة أواني الطهي لتجربة طهي مريحة وسهلة.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-cooker-set">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('cooker-set')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/dilution.jpg" alt="Dilution Product" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Dilution Product</h3>
+                  <p class="product-description">منتج التخفيف للاستخدام المتعدد في المنزل.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-dilution">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('dilution')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/dish_cleen.jpg" alt="Dish Cleaner" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Dish Cleaner</h3>
+                  <p class="product-description">منظف الصحون لتنظيف فعال وبدون مواد كيميائية قاسية.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-dish-cleaner">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('dish-cleaner')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/dyna_cleen.jpg" alt="Dyna Clean" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Dyna Clean</h3>
+                  <p class="product-description">منتج Dyna Clean لتنظيف فعال لجميع الأسطح في المنزل.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-dyna-clean">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('dyna-clean')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/epws_side.jpg" alt="EPWS Side" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">EPWS Side</h3>
+                  <p class="product-description">منتج EPWS Side لتنقية المياه بكفاءة عالية.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-epws-side">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('epws-side')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/espresso.jpg" alt="Espresso Maker" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Espresso Maker</h3>
+                  <p class="product-description">جهاز تحضير الإسبريسو للحصول على قهوة ذات طعم رائع.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-espresso-maker">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('espresso-maker')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/gt6.jpg" alt="GT6" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">GT6</h3>
+                  <p class="product-description">منتج GT6 لتحسين الأداء وتقوية النشاط.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-gt6">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('gt6')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/HA012_Tea_Infuser_Front.jpg" alt="Tea Infuser" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Tea Infuser</h3>
+                  <p class="product-description">مصفاة الشاي لتحضير شاي طبيعي ولذيذ.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-tea-infuser">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('tea-infuser')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/kimono-darkblue.jpg" alt="Kimono Dark Blue" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Kimono Dark Blue</h3>
+                  <p class="product-description">كي مونو باللون الأزرق الداكن لتصميم أنيق.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-kimono-darkblue">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('kimono-darkblue')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/otg_mug.jpg" alt="OTG Mug" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">OTG Mug</h3>
+                  <p class="product-description">كوب OTG للراحة أثناء التنقل.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-otg-mug">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('otg-mug')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/ozonizer.jpg" alt="Ozonizer" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Ozonizer</h3>
+                  <p class="product-description">أوزونيزر لتنقية الهواء وإزالة الروائح الكريهة.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-ozonizer">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('ozonizer')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/pine_cleen.jpg" alt="Pine Clean" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Pine Clean</h3>
+                  <p class="product-description">منتج تنظيف Pine Clean للأماكن ذات الروائح العطرة.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-pine-clean">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('pine-clean')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/qpro.jpg" alt="QPro" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">QPro</h3>
+                  <p class="product-description">منتج QPro لتحسين الأداء والجودة في كل استخدام.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-qpro">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('qpro')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/shaker.jpg" alt="Shaker" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Shaker</h3>
+                  <p class="product-description">شاكير لتحضير مشروباتك المفضلة بسهولة.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-shaker">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('shaker')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/sheen.jpg" alt="Sheen" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Sheen</h3>
+                  <p class="product-description">منتج Sheen للحصول على إشراقة ولمعان مميز.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-sheen">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('sheen')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/smartpot.jpg" alt="Smart Pot" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Smart Pot</h3>
+                  <p class="product-description">وعاء ذكي لمساعدتك في الطهي بشكل أسرع وأبسط.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-smartpot">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('smartpot')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/Stirring-Cup.jpg" alt="Stirring Cup" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Stirring Cup</h3>
+                  <p class="product-description">كوب التحريك لسهولة مزج المكونات.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-stirring-cup">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('stirring-cup')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/toilet_cleaner.jpg" alt="Toilet Cleaner" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Toilet Cleaner</h3>
+                  <p class="product-description">منظف المرحاض الفعال لإزالة الأوساخ والروائح.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-toilet-cleaner">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('toilet-cleaner')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/vegi-cleen.jpg" alt="Vegi Clean" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Vegi Clean</h3>
+                  <p class="product-description">منتج Vegi Clean لتنظيف الخضروات والفواكه بشكل آمن.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-vegi-cleen">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('vegi-cleen')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-card coffee">
+                <div class="product-image">
+                  <img src="../images/OTH/yogurt_maker.jpg" alt="Yogurt Maker" />
+                </div>
+                <div class="product-content">
+                  <h3 class="product-title">Yogurt Maker</h3>
+                  <p class="product-description">جهاز صنع الزبادي للحصول على زبادي طازج في المنزل.</p>
+                  <div class="product-actions">
+                    <button class="btn btn-primary btn-details" data-modal="product-modal-yogurt-maker">
+                      مزيد من التفاصيل
+                    </button>
+                    <button class="share-btn" onclick="copyProductLink('yogurt-maker')">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هو الفطر الريشي (لينجزي)؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                الفطر الريشي (لينجزي) هو فطر طبي استخدم في الطب الصيني التقليدي
+                لآلاف السنين. يعرف علمياً باسم Ganoderma lucidum، ويتميز بخصائصه
+                المعززة للمناعة ومضادات الأكسدة. يستخدم لتحسين الصحة العامة
+                وتعزيز طول العمر.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>ما هي فوائد منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>تتميز منتجات DXN بفوائد صحية متعددة، منها:</p>
+              <ul>
+                <li>تعزيز جهاز المناعة</li>
+                <li>تحسين الدورة الدموية</li>
+                <li>دعم صحة الكبد</li>
+                <li>تحسين النوم والاسترخاء</li>
+                <li>تنظيم مستويات السكر في الدم</li>
+                <li>تحسين صحة الجهاز الهضمي</li>
+                <li>مضادات للأكسدة تحمي الخلايا من التلف</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني شراء منتجات DXN؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك شراء منتجات DXN من خلال:</p>
+              <ul>
+                <li>
+                  زيارة أقرب فرع DXN إليك (استخدم نظام البحث عن الفروع في
+                  موقعنا)
+                </li>
+                <li>
+                  التواصل معنا مباشرة عبر أرقام الهاتف أو وسائل التواصل
+                  الاجتماعي
+                </li>
+                <li>التسجيل كعضو في DXN للحصول على خصومات وامتيازات إضافية</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>هل منتجات DXN آمنة للاستخدام اليومي؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                نعم، منتجات DXN آمنة للاستخدام اليومي. جميع المنتجات مصنوعة من
+                مكونات طبيعية وتخضع لاختبارات جودة صارمة. ومع ذلك، ننصح دائماً
+                باستشارة الطبيب قبل استخدام أي مكملات غذائية، خاصة للأشخاص الذين
+                يعانون من حالات صحية معينة أو يتناولون أدوية.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>كيف يمكنني الانضمام إلى DXN كعضو؟</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>يمكنك الانضمام إلى DXN كعضو من خلال:</p>
+              <ul>
+                <li>النقر على زر "انضم إلينا" في أعلى الموقع</li>
+                <li>زيارة أقرب فرع DXN وملء نموذج العضوية</li>
+                <li>
+                  التواصل معنا مباشرة للحصول على المساعدة في عملية التسجيل
+                </li>
+              </ul>
+              <p>
+                العضوية في DXN تمنحك فرصة للحصول على المنتجات بأسعار مخفضة،
+                بالإضافة إلى إمكانية بناء عملك الخاص من خلال نظام التسويق
+                المباشر.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="../images/dxn-logo.png" alt="DXN Logo" />
+          </div>
+          <p>
+            نحن فرع تسويقي معتمد لشركة DXN العالمية، نهدف إلى تقديم خدمات
+            واضحة ومباشرة لعملائنا وتوفير المعلومات الكاملة عن منتجات DXN.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/lamha.666"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/lamha.comm?igsh=bzBpdzd4aTk0Y3Y0"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UC6XnyAbLYCX_aebDQmc6Gag"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">روابط سريعة</h3>
+          <ul>
+            <li class="footer-link"><a href="#">الرئيسية</a></li>
+            <li class="footer-link"><a href="#about">من نحن</a></li>
+            <li class="footer-link"><a href="#products">المنتجات</a></li>
+            <li class="footer-link"><a href="#branches">الفروع</a></li>
+            <li class="footer-link"><a href="#contact">اتصل بنا</a></li>
+            <li class="footer-link"><a href="learn.html">تعلّم</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">المنتجات</h3>
+          <ul>
+            <li class="footer-link">
+              <a href="products.html#beverages">المشروبات الصحية</a>
+            </li>
+            <li class="footer-link">
+              <a href="products.html#supplements">المكملات الغذائية</a>
+            </li>
+            <li class="footer-link">
+              <a href="products.html#personal-care">العناية الشخصية</a>
+            </li>
+            <li class="footer-link">
+              <a href="products.html#home-care">العناية بالمنزل</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">تواصل معنا</h3>
+          <ul>
+            <li class="footer-link">
+              <i class="fas fa-phone"></i> +963 930816902
+            </li>
+            <li class="footer-link">
+              <i class="fas fa-envelope"></i> aliasekria263@gmail.com
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Lamha. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+      function openGoogleSearch(productName) {
+        const searchQuery = encodeURIComponent(`${productName} DXN arabic`); // ترميز اسم المنتج
+        const searchUrl = `https://www.google.com/search?q=${searchQuery}&hl=ar `; // بحث بالعربية
+        window.open(searchUrl, "_blank");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const detailButtons = document.querySelectorAll(".btn-details");
+        detailButtons.forEach((button) => {
+          const productName = button
+            .closest(".product-content")
+            .querySelector(".product-title").innerText;
+          button.onclick = function () {
+            openGoogleSearch(productName);
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

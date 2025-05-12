@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منتجات DXN - منتجات طبيعية للصحة والعافية</title>
+    <title>الأغذية والمشروبات</title>
+    <link rel="icon" href="images/dxn-logo.png" type="image/png" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -18,6 +19,71 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        overflow: auto;
+        padding: 40px 20px;
+      }
+
+      .modal-content {
+        background: #fff;
+        margin: auto;
+        padding: 30px;
+        max-width: 600px;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .modal-content img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+
+      .modal-content h2 {
+        margin: 0 0 10px;
+        color: #333;
+        font-size: 24px;
+      }
+
+      .modal-content p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .modal .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        color: #888;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
   <body class="light-mode">
     <!-- Header -->
@@ -59,7 +125,7 @@
                 <i class="fas fa-moon"></i>
               </button>
               <a
-                href="https://dxn2u.com/register/123456789"
+                href="https://eworld.dxn2u.com/s/accreg/ar/827460502"
                 class="btn btn-accent register-btn"
                 >انضم إلينا</a
               >
@@ -68,73 +134,13 @@
         </div>
         <div class="toggle-out-list">
           <a
-            href="https://dxn2u.com/register/123456789"
+            href="https://eworld.dxn2u.com/s/accreg/ar/827460502"
             class="btn btn-accent register-btn"
             >انضم إلينا</a
           >
         </div>
       </div>
     </header>
-
-    <!-- Products Header -->
-    <!-- <section class="products-header">
-      <div class="container">
-        <h1>المشروبات الصحة</h1>
-        <p>استكشف مجموعة واسعة من المشروبات الصحية</p>
-      </div>
-    </section> -->
-
-    <!-- Customer Dashboard -->
-    <!-- <section class="section">
-      <div class="container">
-        <div class="dashboard-container">
-          <div class="dashboard-header">
-            <h2 class="dashboard-title">لوحة تحكم العميل</h2>
-          </div>
-
-          <div class="dashboard-tabs">
-            <div class="dashboard-tab active" data-tab="recent">
-              المنتجات التي زرتها مؤخراً
-            </div>
-            <div class="dashboard-tab" data-tab="suggested">
-              المنتجات المقترحة
-            </div>
-            <div class="dashboard-tab" data-tab="favorites">المفضلة</div>
-          </div>
-
-          <div class="dashboard-content">
-            <div class="recent-products">
-              <div class="recent-product">
-                <img
-                  src="images/products/reishi-coffee.jpg"
-                  alt="قهوة الريشي"
-                />
-                <div class="recent-product-info">
-                  <h4>قهوة الريشي</h4>
-                  <p>زيارة منذ 2 دقيقة</p>
-                </div>
-              </div>
-
-              <div class="recent-product">
-                <img src="images/products/spirulina.jpg" alt="سبيرولينا" />
-                <div class="recent-product-info">
-                  <h4>سبيرولينا</h4>
-                  <p>زيارة منذ 5 دقائق</p>
-                </div>
-              </div>
-
-              <div class="recent-product">
-                <img src="images/products/cordyceps.jpg" alt="كورديسبس" />
-                <div class="recent-product-info">
-                  <h4>كورديسبس</h4>
-                  <p>زيارة منذ 10 دقائق</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Products Search and Filters -->
     <section class="section" style="padding-bottom: 0px !important">
@@ -150,27 +156,6 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
-
-        <!-- <div class="products-filters">
-          <button class="filter-btn active" data-filter="all">الكل</button>
-          <button class="filter-btn" data-filter="beverages">
-            المشروبات الصحية
-          </button>
-          <button class="filter-btn" data-filter="supplements">
-            المكملات الغذائية
-          </button>
-          <button class="filter-btn" data-filter="personal-care">
-            العناية الشخصية
-          </button>
-          <button class="filter-btn" data-filter="home-care">
-            العناية بالمنزل
-          </button>
-          <button class="filter-btn" data-filter="energy">الطاقة</button>
-          <button class="filter-btn" data-filter="digestive">
-            الجهاز الهضمي
-          </button>
-          <button class="filter-btn" data-filter="immunity">المناعة</button>
-        </div> -->
       </div>
     </section>
 
@@ -181,106 +166,66 @@
 
         <div class="products-grid">
           <!-- Existing Products -->
-          <!-- Product 0: DXN Civattino Coffee -->
-          <div class="product-card coffee energy">
+          <div class="product-card coffee">
             <div class="product-image">
-              <img
-                src="../images/FFB/Coffee/civattino.jpg"
-                alt="قهوة DXN سيفاتينو"
-              />
+              <img src="../images/FFB/Coffee/2in1.jpg" alt="2In1" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">DXN Civattino Coffee</h3>
+              <h3 class="product-title">DXN Lingzhi Black Coffee 2in1</h3>
               <p class="product-description">
-                قهوة لذيذة وغنية بنكهة الفطر الغانوديرما، تعزز الطاقة والتركيز
-                بشكل طبيعي.
+                قهوة سوداء مميزة تجمع بين فوائد الفطر الريشي والطعم الغني.
               </p>
               <div class="product-actions">
                 <button
                   class="btn btn-primary btn-details"
-                  data-modal="product-modal-1"
+                  data-modal="product-modal-new-1"
                 >
                   مزيد من التفاصيل
                 </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('dxn-civattino-coffee')"
-                >
+                <button class="share-btn" onclick="copyProductLink('2in1')">
                   <i class="fas fa-share-alt"></i>
                 </button>
               </div>
             </div>
           </div>
-          <!-- Product 1: نسكافية الفطر الريشي 3 في 1 -->
-          <div class="product-card coffee energy">
+          <div class="product-card coffee">
             <div class="product-image">
-              <img
-                src="../images/products/nescafe-reishi.jpg"
-                alt="نسكافية الفطر الريشي 3 في 1"
-              />
+              <img src="../images/FFB/Coffee/3in1.jpg" alt="3In1" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">نسكافية الفطر الريشي 3 في 1</h3>
+              <h3 class="product-title">Dxn lingzhi coffee 3in1</h3>
               <p class="product-description">
-                نسكافية فورية مع فوائد الفطر الريشي.
+                قهوة 3 في 1 تجمع بين القهوة والسكر والكريمة، مع فوائد صحية.
               </p>
               <div class="product-actions">
                 <button
                   class="btn btn-primary btn-details"
-                  data-modal="product-modal-2"
+                  data-modal="product-modal-new-2"
                 >
                   مزيد من التفاصيل
                 </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('nescafe-reishi')"
-                >
+                <button class="share-btn" onclick="copyProductLink('3in1')">
                   <i class="fas fa-share-alt"></i>
                 </button>
               </div>
             </div>
           </div>
-          <!-- New Products -->
-          <div class="product-card coffee energy">
+          <div class="product-card coffee">
             <div class="product-image">
               <img
-                src="../images/products/coffee-moka.jpg"
-                alt="قهوة زهي موكا"
+                src="../images/FFB/Coffee/black_coffee.jpg"
+                alt="Black Coffee"
               />
             </div>
             <div class="product-content">
-              <h3 class="product-title">قهوة زهي موكا</h3>
-              <p class="product-description">قهوة موكا غنية بالنكهات.</p>
+              <h3 class="product-title">Black Coffee</h3>
+              <p class="product-description">
+                قهوة سوداء غنية تعزز التركيز والطاقة.
+              </p>
               <div class="product-actions">
                 <button
                   class="btn btn-primary btn-details"
-                  data-modal="product-modal-3"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('zahi-moka')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card coffee energy">
-            <div class="product-image">
-              <img
-                src="../images/products/black-coffee.jpg"
-                alt="القهوة السوداء"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">القهوة السوداء</h3>
-              <p class="product-description">قهوة سوداء قوية.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-4"
+                  data-modal="product-modal-new-3"
                 >
                   مزيد من التفاصيل
                 </button>
@@ -293,716 +238,715 @@
               </div>
             </div>
           </div>
-          <div class="product-card coffee energy">
+          <div class="product-card coffee">
             <div class="product-image">
-              <img
-                src="../images/products/coffee-classic.jpg"
-                alt="قهوة زهي كالسيك"
-              />
+              <img src="../images/FFB/Coffee/civattino.jpg" alt="Civattino" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">قهوة زهي كالسيك</h3>
-              <p class="product-description">قهوة كلاسيكية غنية.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-5"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('zahi-classic')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card coffee energy">
-            <div class="product-image">
-              <img
-                src="../images/products/coffee-zenho.jpg"
-                alt="قهوة زينهو البيضاء"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">قهوة زينهو البيضاء</h3>
-              <p class="product-description">قهوة بيضاء فاخرة.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-6"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('zenho-white')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card coffee energy">
-            <div class="product-image">
-              <img src="../images/products/coffee-cream.jpg" alt="كريم كوفي" />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">كريم كوفي</h3>
-              <p class="product-description">كريم قهوة لذيذ.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-7"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('coffee-cream')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card coffee energy">
-            <div class="product-image">
-              <img
-                src="../images/products/instant-coffee.jpg"
-                alt="نسكافية الكوردوسيبس 3 في 1"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">نسكافية الكوردوسيبس 3 في 1</h3>
+              <h3 class="product-title">Civattino</h3>
               <p class="product-description">
-                نسكافية فورية مع فوائد الكوردوسيبس.
+                قهوة مميزة بنكهة الكريمة، مثالية لمحبي القهوة الفاخرة.
               </p>
               <div class="product-actions">
                 <button
                   class="btn btn-primary btn-details"
-                  data-modal="product-modal-8"
+                  data-modal="product-modal-new-4"
                 >
                   مزيد من التفاصيل
                 </button>
                 <button
                   class="share-btn"
-                  onclick="copyProductLink('cordyceps-coffee')"
+                  onclick="copyProductLink('civattino')"
                 >
                   <i class="fas fa-share-alt"></i>
                 </button>
               </div>
             </div>
           </div>
-          <div class="product-card coffee energy">
+          <!-- ... (تم تقطيع الرد للتنظيم) ... -->
+          <div class="product-card coffee">
             <div class="product-image">
               <img
-                src="../images/products/mushroom-noodles.jpg"
-                alt="اندومي بالاسبيرولينا - نودلز"
+                src="../images/FFB/Coffee/cordyceps-neo.jpg"
+                alt="Cordyceps Neo"
               />
             </div>
             <div class="product-content">
-              <h3 class="product-title">اندومي بالاسبيرولينا - نودلز</h3>
-              <p class="product-description">نودلز صحية مع الاسبيرولينا.</p>
+              <h3 class="product-title">Cordyceps Neo</h3>
+              <p class="product-description">
+                قهوة تحتوي على فطر الكورديسيبس، تعزز الطاقة والقدرة البدنية.
+              </p>
               <div class="product-actions">
                 <button
                   class="btn btn-primary btn-details"
-                  data-modal="product-modal-9"
+                  data-modal="product-modal-new-5"
                 >
                   مزيد من التفاصيل
                 </button>
                 <button
                   class="share-btn"
-                  onclick="copyProductLink('spirulina-noodles')"
+                  onclick="copyProductLink('cordyceps-neo')"
                 >
                   <i class="fas fa-share-alt"></i>
                 </button>
               </div>
             </div>
           </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/FFB/Coffee/cordyceps.jpg" alt="Cordyceps" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Cordyceps</h3>
+              <p class="product-description">
+                قهوة غنية بمستخلص الكورديسيبس، تدعم الصحة العامة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-6"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('cordyceps')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/cream_coffee.jpg"
+                alt="Cream Coffee"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Cream Coffee</h3>
+              <p class="product-description">
+                قهوة كريمية لذيذة، مثالية لمحبي القهوة الحلوة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-7"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('cream-coffee')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/dxn-cocozhi.jpeg"
+                alt="Dxn Cocozhi"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Dxn Cocozhi</h3>
+              <p class="product-description">
+                قهوة مميزة تحتوي على جوز الهند، تعزز النكهة والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-8"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('dxn-cocozhi')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB127_EuCafe_Bag.jpg"
+                alt="FB127 Eucafe Bag"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB127 Eucafe Bag</h3>
+              <p class="product-description">
+                قهوة أوروبية فاخرة، مثالية للاستمتاع في أي وقت.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-9"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb127-eucafe-bag')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB128_VitaCafe_Bag.jpg"
+                alt="FB128 Vitacafe Bag"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB128 Vitacafe Bag</h3>
+              <p class="product-description">
+                قهوة غنية بالفيتامينات، تدعم الصحة العامة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-10"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb128-vitacafe-bag')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- البطاقات من 11 إلى 29 في الرد التالي مباشرة -->
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB215_LionsManeCoffee_Box.jpg"
+                alt="FB215 Lionsmane Coffee Box"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB215 Lionsmane Coffee Box</h3>
+              <p class="product-description">
+                قهوة تحتوي على فطر Lions Mane، تعزز التركيز والذاكرة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-11"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb215-lionsmane-coffee-box')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB364_DXN_ZhiRoastCoffee.jpg"
+                alt="FB364 DXN Zhiroastcoffee"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB364 DXN Zhiroastcoffee</h3>
+              <p class="product-description">
+                قهوة محمصة بشكل خاص، تعزز النكهة والطعم.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-12"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb364-zhiroastcoffee')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB369_DXN_Ootea_Lingzhi_Coffee_Mix_3in1.jpg"
+                alt="FB369 Lingzhi Coffee 3in1"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB369 Lingzhi Coffee 3in1</h3>
+              <p class="product-description">
+                قهوة 3 في 1 تحتوي على الفطر الريشي، تعزز الصحة والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-13"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb369-lingzhi-3in1')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB371_DXN_Ootea_Lingzhi_Coffee_Mix_2in1.jpg"
+                alt="FB371 Lingzhi Coffee 2in1"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB371 Lingzhi Coffee 2in1</h3>
+              <p class="product-description">
+                قهوة 2 في 1 تحتوي على الفطر الريشي، مثالية لمحبي القهوة السريعة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-14"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb371-lingzhi-2in1')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB372_DXN_Ootea_Cordyceps_Coffee_Mix.jpg"
+                alt="FB372 Cordyceps Coffee Mix"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB372 Cordyceps Coffee Mix</h3>
+              <p class="product-description">
+                قهوة تحتوي على الكورديسيبس، تعزز الطاقة والقدرة البدنية.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-15"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb372-cordyceps-coffee-mix')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB373_DXN_Ootea_ZhiMocha_Mix.jpg"
+                alt="FB373 Zhi Mocha Mix"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB373 Zhi Mocha Mix</h3>
+              <p class="product-description">
+                قهوة موكا لذيذة، تجمع بين نكهة الشوكولاتة والقهوة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-16"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb373-zhimocha')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB374_DXN_Ootea_White_Coffee_Zhino_Mix.jpg"
+                alt="FB374 White Coffee Zhino"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB374 White Coffee Zhino</h3>
+              <p class="product-description">
+                قهوة بيضاء مميزة، تعزز الانتعاش والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-17"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb374-whitecoffee-zhino')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- المتبقي (من 18 إلى 29) في الرد القادم بعد موافقتك أو إشارة منك. -->
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB375_DXN_Ootea_LingzhiBlack_Coffee_Mix.jpg"
+                alt="FB375 Lingzhi Black Coffee Mix"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB375 Lingzhi Black Coffee Mix</h3>
+              <p class="product-description">
+                قهوة سوداء مميزة تحتوي على الفطر الريشي، تعزز الصحة والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-18"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb375-lingzhi-black')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB376_DXN_Ootea_Vita_Cafe_Mix.jpg"
+                alt="FB376 Vita Cafe Mix"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB376 Vita Cafe Mix</h3>
+              <p class="product-description">
+                قهوة غنية بالفيتامينات، تدعم الصحة العامة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-19"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb376-vita-cafe')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB377_DXN_Ootea_EuCafe_Mix.jpg"
+                alt="FB377 EuCafe Mix"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB377 EuCafe Mix</h3>
+              <p class="product-description">
+                قهوة أوروبية فاخرة، مثالية للاستمتاع في أي وقت.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-20"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb377-eucafe')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB395_DXN_Lion'sManeCoffee_Latte_BOX_1_MYS.jpg"
+                alt="FB395 Lions Mane Coffee"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB395 Lions Mane Coffee</h3>
+              <p class="product-description">
+                قهوة تحتوي على فطر Lions Mane، تعزز التركيز والذاكرة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-21"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb395-lionsmane')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB397_Spirulina_Coffee_1.jpg"
+                alt="FB397 Spirulina Coffee"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB397 Spirulina Coffee</h3>
+              <p class="product-description">
+                قهوة تحتوي على السبيرولينا، تعزز الصحة العامة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-22"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb397-spirulina')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB500_DXN_Lingzhi_3in1_NEO_BOX_1.jpg"
+                alt="FB500 Lingzhi 3in1 NEO"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB500 Lingzhi 3in1 NEO</h3>
+              <p class="product-description">
+                قهوة 3 في 1 تحتوي على الفطر الريشي، تعزز الصحة والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-23"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb500-3in1-neo')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/FB501_DXN_Lingzhi_Coffee_3in1_Lite_NEO_1.jpg"
+                alt="FB501 3in1 Lite NEO"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">FB501 3in1 Lite NEO</h3>
+              <p class="product-description">
+                قهوة 3 في 1 خفيفة، مثالية لمحبي القهوة السريعة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-24"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('fb501-lite-neo')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/Lingzhi_coffee_3in1ground-front.jpg"
+                alt="Lingzhi Coffee 3in1 Ground"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Lingzhi Coffee 3in1 Ground</h3>
+              <p class="product-description">
+                قهوة مطحونة تحتوي على الفطر الريشي، تعزز الصحة والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-25"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('lingzhi-3in1-ground')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/FFB/Coffee/lite.jpg" alt="Lite" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Lite</h3>
+              <p class="product-description">
+                قهوة خفيفة، مثالية لمحبي القهوة السريعة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-26"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('lite')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img
+                src="../images/FFB/Coffee/whitecoffee.jpg"
+                alt="White Coffee"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">White Coffee</h3>
+              <p class="product-description">
+                قهوة بيضاء مميزة، تعزز الانتعاش والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-27"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button
+                  class="share-btn"
+                  onclick="copyProductLink('whitecoffee')"
+                >
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/FFB/Coffee/zhicafe.jpg" alt="Zhi Cafe" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Zhi Cafe</h3>
+              <p class="product-description">
+                قهوة مميزة، تعزز الانتعاش والطاقة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-28"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('zhicafe')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card coffee">
+            <div class="product-image">
+              <img src="../images/FFB/Coffee/zhimocha.jpg" alt="Zhi Mocha" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Zhi Mocha</h3>
+              <p class="product-description">
+                قهوة موكا لذيذة، تجمع بين نكهة الشوكولاتة والقهوة.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-details"
+                  data-modal="product-modal-new-29"
+                >
+                  مزيد من التفاصيل
+                </button>
+                <button class="share-btn" onclick="copyProductLink('zhimocha')">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
           <!-- ... Add other products similarly ... -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Supplements Section -->
-    <section class="section" id="supplements">
-      <div class="container">
-        <h2 class="section-title">المكملات الغذائية</h2>
-
-        <div class="products-grid">
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/reishi-capsules-90RG.jpg"
-                alt="فطر ريشي 90 RG كبسولة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">فطر ريشي 90 RG كبسولة</h3>
-              <p class="product-description">مكمل غذائي من فطر الريشي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-10"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('reishi-90RG')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/reishi-capsules-90GL.jpg"
-                alt="فطر ريشي 90 GL كبسولة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">فطر ريشي 90 GL كبسولة</h3>
-              <p class="product-description">مكمل غذائي من فطر الريشي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-11"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('reishi-90GL')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/cordyceps-capsules-60.jpg"
-                alt="فطر الكوردوسيبس 60 كبسولة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">فطر الكوردوسيبس 60 كبسولة</h3>
-              <p class="product-description">مكمل غذائي من فطر الكوردوسيبس.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-12"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('cordyceps-60')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/lion's-mane-capsules-120.jpg"
-                alt="فطر عرف الأسد (120 حبة)"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">فطر عرف الأسد (120 حبة)</h3>
-              <p class="product-description">مكمل غذائي من فطر عرف الأسد.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-13"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('lions-mane-120')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/spirulina-120.jpg"
-                alt="اسبيرولينا 120 حبة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">اسبيرولينا 120 حبة</h3>
-              <p class="product-description">مكمل غذائي من الاسبيرولينا.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-14"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('spirulina-120')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/reishi-capsules-360RG.jpg"
-                alt="فطر ريشي 360 RG كبسولة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">فطر ريشي 360 RG كبسولة</h3>
-              <p class="product-description">مكمل غذائي من فطر الريشي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-15"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('reishi-360RG')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/reishi-capsules-360GL.jpg"
-                alt="فطر ريشي 360 GL كبسولة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">فطر ريشي 360 GL كبسولة</h3>
-              <p class="product-description">مكمل غذائي من فطر الريشي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-16"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('reishi-360GL')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/spirulina-500.jpg"
-                alt="اسبيرولينا 500 حبة"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">اسبيرولينا 500 حبة</h3>
-              <p class="product-description">مكمل غذائي من الاسبيرولينا.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-17"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('spirulina-500')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card supplement">
-            <div class="product-image">
-              <img
-                src="../images/products/reishi-powder.jpg"
-                alt="مسحوق فطر الريشي"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">مسحوق فطر الريشي</h3>
-              <p class="product-description">مسحوق فطر الريشي الطبيعي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-18"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('reishi-powder')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Personal Care Section -->
-    <section class="section" id="personal-care">
-      <div class="container">
-        <h2 class="section-title">العناية الشخصية</h2>
-
-        <div class="products-grid">
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/shampoo.jpg"
-                alt="شامبو جانوزي 250 مل"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">شامبو جانوزي 250 مل</h3>
-              <p class="product-description">شامبو طبيعي للعناية بالشعر.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-19"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button class="share-btn" onclick="copyProductLink('shampoo')">
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/body-foam.jpg"
-                alt="رغوة الجسم جانوزي 250 مل"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">رغوة الجسم جانوزي 250 مل</h3>
-              <p class="product-description">رغوة جسم مرطبة.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-20"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('body-foam')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/toothpaste.jpg"
-                alt="معجون أسنان جانوزي"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">معجون أسنان جانوزي</h3>
-              <p class="product-description">معجون أسنان طبيعي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-21"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('toothpaste')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/massage-oil.jpg"
-                alt="زيت المساج - جانو 75 مل"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">زيت المساج - جانو 75 مل</h3>
-              <p class="product-description">زيت مساج مهدئ.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-22"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('massage-oil')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/tea-tree-cream.jpg"
-                alt="كريم شجرة الشاي"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">كريم شجرة الشاي</h3>
-              <p class="product-description">كريم مرطب للبشرة.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-23"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('tea-tree-cream')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img src="../images/products/travel-kit.jpg" alt="مجموعة السفر" />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">مجموعة السفر</h3>
-              <p class="product-description">مجموعة متكاملة للسفر.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-24"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('travel-kit')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img src="../images/products/soap.jpg" alt="صابونة جانوزي" />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">صابونة جانوزي</h3>
-              <p class="product-description">صابونة طبيعية.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-25"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('ganoderma-soap')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/baby-oil.jpg"
-                alt="زيت الأطفال تشوبي"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">زيت الأطفال تشوبي</h3>
-              <p class="product-description">زيت مخصص للأطفال.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-26"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button class="share-btn" onclick="copyProductLink('baby-oil')">
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/lipstick-dark-red.jpg"
-                alt="أحمر الشفاه - أحمر غامق"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">أحمر الشفاه - أحمر غامق</h3>
-              <p class="product-description">أحمر شفاه غني.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-27"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('dark-red-lipstick')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/lipstick-pearl-red.jpg"
-                alt="أحمر الشفاه - لؤلؤي أحمر"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">أحمر الشفاه - لؤلؤي أحمر</h3>
-              <p class="product-description">أحمر شفاه لؤلؤي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-28"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('pearl-red-lipstick')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/lipstick-pearl-pink.jpg"
-                alt="أحمر الشفاه - لؤلؤي وردي - زهري"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">أحمر الشفاه - لؤلؤي وردي - زهري</h3>
-              <p class="product-description">أحمر شفاه وردي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-29"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('pearl-pink-lipstick')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/lipstick-pearl-maroon.jpg"
-                alt="أحمر الشفاه - لؤلؤي عنابي"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">أحمر الشفاه - لؤلؤي عنابي</h3>
-              <p class="product-description">أحمر شفاه عنابي.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-30"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('pearl-maroon-lipstick')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card personal-care">
-            <div class="product-image">
-              <img
-                src="../images/products/coral-pink-lipstick.jpg"
-                alt="أحمر الشفاه - الوردي المرجاني"
-              />
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">أحمر الشفاه - الوردي المرجاني</h3>
-              <p class="product-description">أحمر شفاه مرجاني.</p>
-              <div class="product-actions">
-                <button
-                  class="btn btn-primary btn-details"
-                  data-modal="product-modal-31"
-                >
-                  مزيد من التفاصيل
-                </button>
-                <button
-                  class="share-btn"
-                  onclick="copyProductLink('coral-pink-lipstick')"
-                >
-                  <i class="fas fa-share-alt"></i>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -1122,28 +1066,21 @@
             </p>
             <div class="social-links">
               <a
-                href="https://facebook.com/dxnmarketing"
+                href="https://www.facebook.com/lamha.666"
                 class="social-link"
                 target="_blank"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a
-                href="https://twitter.com/dxnmarketing"
-                class="social-link"
-                target="_blank"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://instagram.com/dxnmarketing"
+                href="https://www.instagram.com/lamha.comm?igsh=bzBpdzd4aTk0Y3Y0"
                 class="social-link"
                 target="_blank"
               >
                 <i class="fab fa-instagram"></i>
               </a>
               <a
-                href="https://youtube.com/dxnmarketing"
+                href="https://www.youtube.com/channel/UC6XnyAbLYCX_aebDQmc6Gag"
                 class="social-link"
                 target="_blank"
               >
@@ -1155,17 +1092,11 @@
           <div class="footer-links">
             <h3 class="footer-title">روابط سريعة</h3>
             <ul>
-              <li class="footer-link"><a href="index.html">الرئيسية</a></li>
-              <li class="footer-link"><a href="index.html#about">من نحن</a></li>
-              <li class="footer-link">
-                <a href="index.html#products">المنتجات</a>
-              </li>
-              <li class="footer-link">
-                <a href="index.html#branches">الفروع</a>
-              </li>
-              <li class="footer-link">
-                <a href="index.html#contact">اتصل بنا</a>
-              </li>
+              <li class="footer-link"><a href="#">الرئيسية</a></li>
+              <li class="footer-link"><a href="#about">من نحن</a></li>
+              <li class="footer-link"><a href="#products">المنتجات</a></li>
+              <li class="footer-link"><a href="#branches">الفروع</a></li>
+              <li class="footer-link"><a href="#contact">اتصل بنا</a></li>
               <li class="footer-link"><a href="learn.html">تعلّم</a></li>
             </ul>
           </div>
@@ -1174,16 +1105,16 @@
             <h3 class="footer-title">المنتجات</h3>
             <ul>
               <li class="footer-link">
-                <a href="#beverages">المشروبات الصحية</a>
+                <a href="products.html#beverages">المشروبات الصحية</a>
               </li>
               <li class="footer-link">
-                <a href="#supplements">المكملات الغذائية</a>
+                <a href="products.html#supplements">المكملات الغذائية</a>
               </li>
               <li class="footer-link">
-                <a href="#personal-care">العناية الشخصية</a>
+                <a href="products.html#personal-care">العناية الشخصية</a>
               </li>
               <li class="footer-link">
-                <a href="#home-care">العناية بالمنزل</a>
+                <a href="products.html#home-care">العناية بالمنزل</a>
               </li>
             </ul>
           </div>
@@ -1192,1623 +1123,41 @@
             <h3 class="footer-title">تواصل معنا</h3>
             <ul>
               <li class="footer-link">
-                <i class="fas fa-phone"></i> +123 456 7890
+                <i class="fas fa-phone"></i> +963 930816902
               </li>
               <li class="footer-link">
-                <i class="fas fa-envelope"></i> info@dxnmarketing.com
-              </li>
-              <li class="footer-link">
-                <i class="fas fa-map-marker-alt"></i> العنوان، المدينة، الدولة
+                <i class="fas fa-envelope"></i> aliasekria263@gmail.com
               </li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2025 DXN Marketing. جميع الحقوق محفوظة.</p>
+          <p>&copy; 2025 Lamha. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Product Modals -->
-    <!-- Modal 1 -->
-    <div class="modal" id="product-modal-1">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">DXN Civattino Coffee</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/FFB/Coffee/civattino.jpg"
-                alt="DXN Civattino Coffee"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>DXN Civattino Coffee</h3>
-              <p>
-                قهوة لذيذة وغنية بنكهة الفطر الغانوديرما، تعزز الطاقة والتركيز
-                بشكل طبيعي.
-              </p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز الطاقة والتركيز</li>
-                  <li>تحسين المزاج</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>قهوة فورية</li>
-                  <li>مستخلص الفطر الغانوديرما</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 2: نسكافية الفطر الريشي 3 في 1 -->
-    <div class="modal" id="product-modal-2">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">نسكافية الفطر الريشي 3 في 1</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/nescafe-reishi.jpg"
-                alt="نسكافية الفطر الريشي 3 في 1"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>نسكافية الفطر الريشي 3 في 1</h3>
-              <p>نسكافية فورية مع فوائد الفطر الريشي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز الطاقة والتركيز</li>
-                  <li>دعم جهاز المناعة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>نسكافية</li>
-                  <li>مستخلص الفطر الريشي</li>
-                  <li>سكر</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 3: قهوة زهي موكا -->
-    <div class="modal" id="product-modal-3">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">قهوة زهي موكا</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/coffee-moka.jpg"
-                alt="قهوة زهي موكا"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>قهوة زهي موكا</h3>
-              <p>قهوة موكا غنية بالنكهات.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز الطاقة</li>
-                  <li>تحسين المزاج</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>قهوة موكا</li>
-                  <li>كريمة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 4: القهوة السوداء -->
-    <div class="modal" id="product-modal-4">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">القهوة السوداء</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/black-coffee.jpg"
-                alt="القهوة السوداء"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>القهوة السوداء</h3>
-              <p>قهوة سوداء قوية.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تحسين التركيز</li>
-                  <li>زيادة الطاقة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>قهوة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 5: قهوة زهي كالسيك -->
-    <div class="modal" id="product-modal-5">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">قهوة زهي كالسيك</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/coffee-classic.jpg"
-                alt="قهوة زهي كالسيك"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>قهوة زهي كالسيك</h3>
-              <p>قهوة كلاسيكية غنية.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تحسين المزاج</li>
-                  <li>زيادة التركيز</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>قهوة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 6: قهوة زينهو البيضاء -->
-    <div class="modal" id="product-modal-6">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">قهوة زينهو البيضاء</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/coffee-zenho.jpg"
-                alt="قهوة زينهو البيضاء"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>قهوة زينهو البيضاء</h3>
-              <p>قهوة بيضاء فاخرة.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تحسين التركيز</li>
-                  <li>زيادة الطاقة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>قهوة بيضاء</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 7: كريم كوفي -->
-    <div class="modal" id="product-modal-7">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">كريم كوفي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img src="../images/products/coffee-cream.jpg" alt="كريم كوفي" />
-            </div>
-            <div class="product-details-info">
-              <h3>كريم كوفي</h3>
-              <p>كريم قهوة لذيذ.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تحسين المزاج</li>
-                  <li>زيادة الطاقة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>كريمة</li>
-                  <li>قهوة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 8: نسكافية الكوردوسيبس 3 في 1 -->
-    <div class="modal" id="product-modal-8">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">نسكافية الكوردوسيبس 3 في 1</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/instant-coffee.jpg"
-                alt="نسكافية الكوردوسيبس 3 في 1"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>نسكافية الكوردوسيبس 3 في 1</h3>
-              <p>نسكافية فورية مع فوائد الكوردوسيبس.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز الطاقة والتركيز</li>
-                  <li>دعم جهاز المناعة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>نسكافية</li>
-                  <li>مستخلص الكوردوسيبس</li>
-                  <li>سكر</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>أضف كيس واحد إلى كوب من الماء الساخن واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 9: اندومي بالاسبيرولينا - نودلز -->
-    <div class="modal" id="product-modal-9">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">اندومي بالاسبيرولينا - نودلز</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/mushroom-noodles.jpg"
-                alt="اندومي بالاسبيرولينا - نودلز"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>اندومي بالاسبيرولينا - نودلز</h3>
-              <p>نودلز صحية مع الاسبيرولينا.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>غني بالفيتامينات</li>
-                  <li>مفيد لصحة القلب</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>نودلز</li>
-                  <li>اسبيرولينا</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>قم بطهي النودلز حسب التعليمات واستمتع.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 10: فطر ريشي 90 RG كبسولة -->
-    <div class="modal" id="product-modal-10">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">فطر ريشي 90 RG كبسولة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/reishi-capsules-90RG.jpg"
-                alt="فطر ريشي 90 RG كبسولة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>فطر ريشي 90 RG كبسولة</h3>
-              <p>مكمل غذائي من فطر الريشي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز جهاز المناعة</li>
-                  <li>تحسين الصحة العامة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر ريشي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول كبسولة واحدة يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 11: فطر ريشي 90 GL كبسولة -->
-    <div class="modal" id="product-modal-11">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">فطر ريشي 90 GL كبسولة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/reishi-capsules-90GL.jpg"
-                alt="فطر ريشي 90 GL كبسولة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>فطر ريشي 90 GL كبسولة</h3>
-              <p>مكمل غذائي من فطر الريشي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز جهاز المناعة</li>
-                  <li>تحسين الصحة العامة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر ريشي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول كبسولة واحدة يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 12: فطر الكوردوسيبس 60 كبسولة -->
-    <div class="modal" id="product-modal-12">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">فطر الكوردوسيبس 60 كبسولة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/cordyceps-capsules-60.jpg"
-                alt="فطر الكوردوسيبس 60 كبسولة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>فطر الكوردوسيبس 60 كبسولة</h3>
-              <p>مكمل غذائي من فطر الكوردوسيبس.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز الطاقة</li>
-                  <li>تحسين الأداء البدني</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر كوردوسيبس</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول كبسولة واحدة يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 13: فطر عرف الأسد (120 حبة) -->
-    <div class="modal" id="product-modal-13">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">فطر عرف الأسد (120 حبة)</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lion's-mane-capsules-120.jpg"
-                alt="فطر عرف الأسد (120 حبة)"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>فطر عرف الأسد (120 حبة)</h3>
-              <p>مكمل غذائي من فطر عرف الأسد.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تحسين الذاكرة</li>
-                  <li>دعم صحة الدماغ</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر عرف الأسد</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول كبسولة واحدة يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 14: اسبيرولينا 120 حبة -->
-    <div class="modal" id="product-modal-14">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">اسبيرولينا 120 حبة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/spirulina-120.jpg"
-                alt="اسبيرولينا 120 حبة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>اسبيرولينا 120 حبة</h3>
-              <p>مكمل غذائي من الاسبيرولينا.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>غني بالفيتامينات</li>
-                  <li>مفيد لصحة القلب</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>اسبيرولينا</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول حبتين يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 15: فطر ريشي 360 RG كبسولة -->
-    <div class="modal" id="product-modal-15">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">فطر ريشي 360 RG كبسولة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/reishi-capsules-360RG.jpg"
-                alt="فطر ريشي 360 RG كبسولة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>فطر ريشي 360 RG كبسولة</h3>
-              <p>مكمل غذائي من فطر الريشي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز جهاز المناعة</li>
-                  <li>تحسين الصحة العامة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر ريشي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول كبسولة واحدة يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 16: فطر ريشي 360 GL كبسولة -->
-    <div class="modal" id="product-modal-16">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">فطر ريشي 360 GL كبسولة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/reishi-capsules-360GL.jpg"
-                alt="فطر ريشي 360 GL كبسولة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>فطر ريشي 360 GL كبسولة</h3>
-              <p>مكمل غذائي من فطر الريشي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز جهاز المناعة</li>
-                  <li>تحسين الصحة العامة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر ريشي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول كبسولة واحدة يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 17: اسبيرولينا 500 حبة -->
-    <div class="modal" id="product-modal-17">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">اسبيرولينا 500 حبة</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/spirulina-500.jpg"
-                alt="اسبيرولينا 500 حبة"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>اسبيرولينا 500 حبة</h3>
-              <p>مكمل غذائي من الاسبيرولينا.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>غني بالفيتامينات</li>
-                  <li>مفيد لصحة القلب</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>اسبيرولينا</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>تناول حبتين يومياً مع الماء.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 18: مسحوق فطر الريشي -->
-    <div class="modal" id="product-modal-18">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">مسحوق فطر الريشي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/reishi-powder.jpg"
-                alt="مسحوق فطر الريشي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>مسحوق فطر الريشي</h3>
-              <p>مسحوق فطر الريشي الطبيعي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تعزيز جهاز المناعة</li>
-                  <li>تحسين الصحة العامة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>فطر ريشي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>يمكن إضافته إلى المشروبات أو الأطعمة.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 19: شامبو جانوزي 250 مل -->
-    <div class="modal" id="product-modal-19">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">شامبو جانوزي 250 مل</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/shampoo.jpg"
-                alt="شامبو جانوزي 250 مل"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>شامبو جانوزي 250 مل</h3>
-              <p>شامبو طبيعي للعناية بالشعر.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>ترطيب الشعر</li>
-                  <li>تحسين صحة فروة الرأس</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مستخلصات طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي شامبو آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 20: رغوة الجسم جانوزي 250 مل -->
-    <div class="modal" id="product-modal-20">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">رغوة الجسم جانوزي 250 مل</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/body-foam.jpg"
-                alt="رغوة الجسم جانوزي 250 مل"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>رغوة الجسم جانوزي 250 مل</h3>
-              <p>رغوة جسم مرطبة.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>ترطيب البشرة</li>
-                  <li>تحسين نعومة الجلد</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مستخلصات طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه بعد الاستحمام.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 21: معجون أسنان جانوزي -->
-    <div class="modal" id="product-modal-21">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">معجون أسنان جانوزي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/toothpaste.jpg"
-                alt="معجون أسنان جانوزي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>معجون أسنان جانوزي</h3>
-              <p>معجون أسنان طبيعي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تنظيف الأسنان</li>
-                  <li>تحسين صحة الفم</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مستخلصات طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي معجون أسنان آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 22: زيت المساج - جانو 75 مل -->
-    <div class="modal" id="product-modal-22">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">زيت المساج - جانو 75 مل</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/massage-oil.jpg"
-                alt="زيت المساج - جانو 75 مل"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>زيت المساج - جانو 75 مل</h3>
-              <p>زيت مساج مهدئ.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تخفيف التوتر</li>
-                  <li>تحسين الدورة الدموية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>زيوت طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه أثناء التدليك.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 23: كريم شجرة الشاي -->
-    <div class="modal" id="product-modal-23">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">كريم شجرة الشاي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/tea-tree-cream.jpg"
-                alt="كريم شجرة الشاي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>كريم شجرة الشاي</h3>
-              <p>كريم مرطب للبشرة.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>ترطيب البشرة</li>
-                  <li>مكافحة البكتيريا</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>زيت شجرة الشاي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه على البشرة بعد التنظيف.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 24: مجموعة السفر -->
-    <div class="modal" id="product-modal-24">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">مجموعة السفر</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img src="../images/products/travel-kit.jpg" alt="مجموعة السفر" />
-            </div>
-            <div class="product-details-info">
-              <h3>مجموعة السفر</h3>
-              <p>مجموعة متكاملة للسفر.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>سهولة الحمل</li>
-                  <li>تلبية احتياجات السفر</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>منتجات العناية الشخصية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه حسب الحاجة أثناء السفر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 25: صابونة جانوزي -->
-    <div class="modal" id="product-modal-25">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">صابونة جانوزي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img src="../images/products/soap.jpg" alt="صابونة جانوزي" />
-            </div>
-            <div class="product-details-info">
-              <h3>صابونة جانوزي</h3>
-              <p>صابونة طبيعية.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تنظيف البشرة</li>
-                  <li>ترطيب البشرة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مستخلصات طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمها كأي صابونة أخرى.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 26: زيت الأطفال تشوبي -->
-    <div class="modal" id="product-modal-26">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">زيت الأطفال تشوبي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/baby-oil.jpg"
-                alt="زيت الأطفال تشوبي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>زيت الأطفال تشوبي</h3>
-              <p>زيت مخصص للأطفال.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>ترطيب البشرة الحساسة</li>
-                  <li>تخفيف التهيج</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>زيوت طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه بعد الاستحمام.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 27: أحمر الشفاه - أحمر غامق -->
-    <div class="modal" id="product-modal-27">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - أحمر غامق</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-dark-red.jpg"
-                alt="أحمر الشفاه - أحمر غامق"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - أحمر غامق</h3>
-              <p>أحمر شفاه غني.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 28: أحمر الشفاه - لؤلؤي أحمر -->
-    <div class="modal" id="product-modal-28">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - لؤلؤي أحمر</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-pearl-red.jpg"
-                alt="أحمر الشفاه - لؤلؤي أحمر"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - لؤلؤي أحمر</h3>
-              <p>أحمر شفاه لؤلؤي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 29: أحمر الشفاه - لؤلؤي وردي - زهري -->
-    <div class="modal" id="product-modal-29">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - لؤلؤي وردي - زهري</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-pearl-pink.jpg"
-                alt="أحمر الشفاه - لؤلؤي وردي - زهري"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - لؤلؤي وردي - زهري</h3>
-              <p>أحمر شفاه وردي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 30: أحمر الشفاه - لؤلؤي عنابي -->
-    <div class="modal" id="product-modal-30">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - لؤلؤي عنابي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-pearl-maroon.jpg"
-                alt="أحمر الشفاه - لؤلؤي عنابي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - لؤلؤي عنابي</h3>
-              <p>أحمر شفاه عنابي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 31: أحمر الشفاه - الوردي المرجاني -->
-    <div class="modal" id="product-modal-31">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - الوردي المرجاني</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/coral-pink-lipstick.jpg"
-                alt="أحمر الشفاه - الوردي المرجاني"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - الوردي المرجاني</h3>
-              <p>أحمر شفاه بلون وردي مرجاني.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 32: زيت المساج - جانو 75 مل -->
-    <div class="modal" id="product-modal-32">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">زيت المساج - جانو 75 مل</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/massage-oil.jpg"
-                alt="زيت المساج - جانو 75 مل"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>زيت المساج - جانو 75 مل</h3>
-              <p>زيت مساج مهدئ.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تخفيف التوتر</li>
-                  <li>تحسين الدورة الدموية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>زيوت طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه أثناء التدليك.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 33: كريم شجرة الشاي -->
-    <div class="modal" id="product-modal-33">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">كريم شجرة الشاي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/tea-tree-cream.jpg"
-                alt="كريم شجرة الشاي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>كريم شجرة الشاي</h3>
-              <p>كريم مرطب للبشرة.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>ترطيب البشرة</li>
-                  <li>مكافحة البكتيريا</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>زيت شجرة الشاي</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه على البشرة بعد التنظيف.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 34: مجموعة السفر -->
-    <div class="modal" id="product-modal-34">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">مجموعة السفر</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img src="../images/products/travel-kit.jpg" alt="مجموعة السفر" />
-            </div>
-            <div class="product-details-info">
-              <h3>مجموعة السفر</h3>
-              <p>مجموعة متكاملة للسفر.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>سهولة الحمل</li>
-                  <li>تلبية احتياجات السفر</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>منتجات العناية الشخصية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه حسب الحاجة أثناء السفر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 35: صابونة جانوزي -->
-    <div class="modal" id="product-modal-35">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">صابونة جانوزي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img src="../images/products/soap.jpg" alt="صابونة جانوزي" />
-            </div>
-            <div class="product-details-info">
-              <h3>صابونة جانوزي</h3>
-              <p>صابونة طبيعية.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تنظيف البشرة</li>
-                  <li>ترطيب البشرة</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مستخلصات طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمها كأي صابونة أخرى.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 36: زيت الأطفال تشوبي -->
-    <div class="modal" id="product-modal-36">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">زيت الأطفال تشوبي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/baby-oil.jpg"
-                alt="زيت الأطفال تشوبي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>زيت الأطفال تشوبي</h3>
-              <p>زيت مخصص للأطفال.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>ترطيب البشرة الحساسة</li>
-                  <li>تخفيف التهيج</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>زيوت طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه بعد الاستحمام.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 37: أحمر الشفاه - أحمر غامق -->
-    <div class="modal" id="product-modal-37">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - أحمر غامق</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-dark-red.jpg"
-                alt="أحمر الشفاه - أحمر غامق"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - أحمر غامق</h3>
-              <p>أحمر شفاه غني.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 38: أحمر الشفاه - لؤلؤي أحمر -->
-    <div class="modal" id="product-modal-38">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - لؤلؤي أحمر</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-pearl-red.jpg"
-                alt="أحمر الشفاه - لؤلؤي أحمر"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - لؤلؤي أحمر</h3>
-              <p>أحمر شفاه لؤلؤي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 39: أحمر الشفاه - لؤلؤي وردي - زهري -->
-    <div class="modal" id="product-modal-39">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - لؤلؤي وردي - زهري</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-pearl-pink.jpg"
-                alt="أحمر الشفاه - لؤلؤي وردي - زهري"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - لؤلؤي وردي - زهري</h3>
-              <p>أحمر شفاه وردي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 40: أحمر الشفاه - لؤلؤي عنابي -->
-    <div class="modal" id="product-modal-40">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">أحمر الشفاه - لؤلؤي عنابي</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="product-details">
-            <div class="product-details-image">
-              <img
-                src="../images/products/lipstick-pearl-maroon.jpg"
-                alt="أحمر الشفاه - لؤلؤي عنابي"
-              />
-            </div>
-            <div class="product-details-info">
-              <h3>أحمر الشفاه - لؤلؤي عنابي</h3>
-              <p>أحمر شفاه عنابي.</p>
-              <div class="product-details-section">
-                <h4>الفوائد الصحية:</h4>
-                <ul>
-                  <li>تجميل الشفاه</li>
-                  <li>ترطيب الشفاه</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>المكونات الرئيسية:</h4>
-                <ul>
-                  <li>مكونات تجميلية طبيعية</li>
-                </ul>
-              </div>
-              <div class="product-details-section">
-                <h4>طريقة الاستخدام:</h4>
-                <p>استخدمه كأي أحمر شفاه آخر.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Custom JavaScript -->
     <script src="../js/main.js"></script>
+    <script>
+      function openGoogleSearch(productName) {
+        const searchQuery = encodeURIComponent(`${productName} DXN arabic`); // ترميز اسم المنتج
+        const searchUrl = `https://www.google.com/search?q=${searchQuery}&hl=ar `; // بحث بالعربية
+        window.open(searchUrl, "_blank");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const detailButtons = document.querySelectorAll(".btn-details");
+        detailButtons.forEach((button) => {
+          const productName = button
+            .closest(".product-content")
+            .querySelector(".product-title").innerText;
+          button.onclick = function () {
+            openGoogleSearch(productName);
+          };
+        });
+      });
+    </script>
   </body>
 </html>

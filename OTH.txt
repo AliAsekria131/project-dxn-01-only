@@ -1,0 +1,30 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 8243-E60C
+
+ Directory of C:\Users\Ali-Asekria\Documents\GitHub\test01-arch1-al11\images\OTH
+
+05/12/2025  06:13 PM    <DIR>          .
+05/12/2025  06:13 PM    <DIR>          ..
+05/12/2025  06:12 PM           189,746 coffee_distiller.jpg
+05/12/2025  06:12 PM           176,534 cooker_set.jpg
+05/12/2025  06:12 PM            51,356 dilution.jpg
+05/12/2025  06:12 PM           134,719 dish_cleen.jpg
+05/12/2025  06:12 PM           204,308 dyna_cleen.jpg
+05/12/2025  06:12 PM           189,671 epws_side.jpg
+05/12/2025  06:12 PM           194,422 espresso.jpg
+05/12/2025  06:12 PM           118,885 gt6.jpg
+05/12/2025  06:12 PM           148,233 HA012_Tea_Infuser_Front.jpg
+05/12/2025  06:12 PM            44,966 kimono-darkblue.jpg
+05/12/2025  06:12 PM            92,745 otg_mug.jpg
+05/12/2025  06:12 PM           141,264 ozonizer.jpg
+05/12/2025  06:12 PM           114,284 pine_cleen.jpg
+05/12/2025  06:12 PM            75,274 qpro.jpg
+05/12/2025  06:12 PM            99,853 shaker.jpg
+05/12/2025  06:12 PM           127,619 sheen.jpg
+05/12/2025  06:12 PM           181,464 smartpot.jpg
+05/12/2025  06:12 PM           201,640 Stirring-Cup.jpg
+05/12/2025  06:12 PM           136,026 toilet_cleaner.jpg
+05/12/2025  06:12 PM            39,418 vegi-cleen.jpg
+05/12/2025  06:12 PM           139,497 yogurt_maker.jpg
+              21 File(s)      2,801,924 bytes
+               2 Dir(s)  97,657,192,448 bytes free
